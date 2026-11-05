@@ -318,7 +318,7 @@ footer{color:var(--doux);font-size:12px;text-align:center;padding:26px 0 30px}
     </section>
   </main>
 
-  <footer>LDGQ · Ligue des DG du Québec · version 2.2</footer>
+  <footer>LDGQ · Ligue des DG du Québec · version 2.3</footer>
 </div>
 
 <script type="text/plain" id="liste-lnh">Nom;Position;Équipe;Cote;Stats;XF
@@ -1288,6 +1288,13 @@ async function stockageFirebase(cfg) {
   const db = firebase.database(), auth = firebase.auth();
   let decalage = 0;
   db.ref('.info/serverTimeOffset').on('value', (s) => { decalage = s.val() || 0; });
+  // Économie de connexions : un onglet caché depuis 1 minute se débranche, et se rebranche dès qu'on y revient.
+  let veille = null;
+  document.addEventListener('visibilitychange', () => {
+    clearTimeout(veille);
+    if (document.hidden) veille = setTimeout(() => { if (document.hidden) db.goOffline(); }, 60000);
+    else db.goOnline();
+  });
   return {
     demo: false,
     ecouter(chemin, cb) {
