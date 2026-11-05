@@ -117,8 +117,15 @@ label.case{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--do
 .pages b{color:var(--texte)}
 
 /* Fiche détaillée d'un joueur */
-.detail{background:#0a1430;border-radius:8px;padding:10px 12px;margin:0 0 6px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px 16px}
+.detail{background:#0a1430;border-radius:8px;padding:12px;margin:0 0 6px}
+.xfs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin-bottom:12px}
+.xf{background:#16122e;border:1px solid #4a2f6b;border-radius:8px;padding:8px 10px;font-size:13px;color:var(--doux)}
+.xf b{display:flex;align-items:center;gap:6px;color:#fff;margin-bottom:2px;font:700 16px/1.2 var(--titre);letter-spacing:.03em}
+.x,.xnb{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:4px;background:#E0263C;color:#fff;font:800 12px/1 var(--titre);flex-shrink:0}
+.xnb{width:16px;height:16px;font-size:11px}
+.groupes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px 22px}
+.groupe h4{font:700 14px/1 var(--titre);letter-spacing:.08em;text-transform:uppercase;color:var(--glace);margin:0 0 6px}
+.groupe .stat{margin-bottom:5px}
 .stat{font-size:13px;color:var(--doux)}
 .stat b{float:right;color:var(--texte);font:800 15px/1.3 var(--titre)}
 .stat i{display:block;height:4px;border-radius:9px;background:#172755;margin-top:3px;overflow:hidden;clear:both}
@@ -304,800 +311,800 @@ footer{color:var(--doux);font-size:12px;text-align:center;padding:26px 0 30px}
             <button class="btn" data-action="liste-lnh">Charger la liste LNH intégrée (783 joueurs)</button>
             <button class="btn" data-action="importer" data-confirme="1">Importer (remplace la liste)</button>
           </div>
-          <p class="aide">Les cotes viennent du top 300 officiel d'EA et des cotes relevées dans le jeu (77 à 99). Quand les deux diffèrent, c'est la cote du jeu qui est utilisée. Les joueurs cotés sous 77 ne sont pas dans la liste. Les statistiques détaillées existent seulement pour les patineurs du top 300.</p>
+          <p class="aide">Les cotes viennent du top 300 officiel d'EA et des cotes relevées dans le jeu (77 à 99). Quand les deux diffèrent, c'est la cote du jeu qui est utilisée. Les joueurs cotés sous 77 ne sont pas dans la liste. Les statistiques détaillées et les X-Factors existent seulement pour le top 300 d'EA.</p>
           <div id="admin-joueurs" class="aide"></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>LDGQ · Ligue des DG du Québec</footer>
+  <footer>LDGQ · Ligue des DG du Québec · version 2.2</footer>
 </div>
 
-<script type="text/plain" id="liste-lnh">Nom;Position;Équipe;Cote;ACL;SPD;FNT;PAS;PTF;PTP
-Connor McDavid;C;EDM;99;98;98;98;99;92;92
-Nathan MacKinnon;C;COL;97;96;95;94;95;91;92
-Nikita Kucherov;AD;TBL;97;90;90;98;98;93;93
-Leon Draisaitl;C;EDM;96;91;90;94;96;89;90
-Cale Makar;D;COL;95;94;94;95;94;92;94
-Zach Werenski;D;CBJ;95;91;92;95;93;93;93
-David Pastrnak;AD;BOS;95;90;89;96;95;93;94
-Sidney Crosby;C;PIT;95;87;87;93;97;90;89
-Quinn Hughes;D;MIN;95;93;93;96;97;89;91
-Macklin Celebrini;C;SJS;95;90;89;93;96;92;93
-Aleksander Barkov;C;FLA;95;86;87;93;94;87;87
-Mikko Rantanen;AD;DAL;94;91;90;93;95;91;90
-Kirill Kaprizov;AG;MIN;94;90;89;95;96;90;90
-Jack Eichel;C;VGK;94;92;92;92;94;91;93
-Andrei Vasilevskiy;G;TBL;94;;;;;;
-Jack Hughes;C;NJD;94;92;92;93;96;87;88
-Rasmus Dahlin;D;BUF;93;90;90;94;94;93;91
-Mitch Marner;AD;VGK;93;88;87;94;96;87;87
-Nick Suzuki;C;MTL;93;90;91;92;94;89;90
-Miro Heiskanen;D;DAL;93;91;90;92;89;86;86
-William Nylander;AD;TOR;93;91;90;92;95;91;93
-Ilya Sorokin;G;NYI;93;;;;;;
-Mark Scheifele;C;WPG;93;91;90;93;93;88;87
-Jason Robertson;AG;DAL;92;88;87;91;93;91;92
-Auston Matthews;C;TOR;92;89;88;91;89;90;93
-Connor Hellebuyck;G;WPG;92;;;;;;
-Kyle Connor;AG;WPG;92;92;91;92;93;92;92
-Martin Necas;C;COL;92;92;93;93;94;92;90
-Evan Bouchard;D;EDM;91;88;88;93;94;95;92
-Sebastian Aho;C;CAR;91;90;89;91;95;89;89
-Tim Stützle;C;OTT;91;93;93;94;92;91;90
-Sam Reinhart;AD;FLA;91;87;86;91;92;88;90
-Igor Shesterkin;G;NYR;91;;;;;;
-Matthew Boldy;AG;MIN;91;90;89;93;93;92;92
-Matthew Schaefer;D;NYI;91;94;93;94;92;89;93
-Clayton Keller;AD;UTA;91;90;89;91;94;90;88
-Jaccob Slavin;D;CAR;91;83;84;82;85;87;85
-Roman Josi;D;NSH;91;92;91;93;90;91;88
-Victor Hedman;D;TBL;91;86;86;88;93;91;89
-Artemi Panarin;AG;LAK;91;90;89;93;94;90;93
-Matthew Tkachuk;AG;FLA;90;85;85;86;93;86;86
-Cole Caufield;AD;MTL;90;88;87;89;90;91;91
-Connor Bedard;C;CHI;90;93;92;92;93;89;93
-Wyatt Johnston;C;DAL;90;89;90;90;91;86;86
-Brandon Hagel;AG;TBL;90;92;91;91;92;88;90
-Josh Morrissey;D;WPG;90;90;89;92;92;89;87
-Logan Thompson;G;WSH;90;;;;;;
-Lane Hutson;D;MTL;90;93;93;93;92;82;83
-Jake Guentzel;AG;TBL;90;88;88;87;92;87;87
-Mark Stone;AD;VGK;90;84;84;87;93;88;84
-Jeremy Swayman;G;BOS;89;;;;;;
-Adam Fox;D;NYR;89;87;86;92;93;83;84
-Charlie McAvoy;D;BOS;89;90;89;90;91;85;86
-Lucas Raymond;AD;DET;89;89;88;92;92;89;91
-Jesper Bratt;AG;NJD;89;92;91;92;93;87;88
-Tage Thompson;C;BUF;89;90;91;93;91;95;94
-Seth Jarvis;AD;CAR;89;90;90;88;90;90;90
-Moritz Seider;D;DET;89;88;87;89;89;91;92
-Jake Sanderson;D;OTT;89;92;94;92;92;92;93
-Filip Forsberg;AG;NSH;89;87;87;89;90;93;94
-Adrian Kempe;AD;LAK;89;91;91;89;90;93;94
-Dylan Larkin;C;DET;89;90;89;90;90;89;90
-Jakob Chychrun;D;WSH;89;92;91;91;90;93;94
-Noah Dobson;D;MTL;89;88;88;89;90;87;88
-Alex DeBrincat;AD;DET;89;90;89;89;88;90;91
-Brady Tkachuk;AG;FLA;89;87;86;88;90;91;91
-Nikolaj Ehlers;AG;CAR;89;91;90;91;90;92;92
-Kirill Marchenko;AD;CBJ;89;91;91;91;86;91;92
-Dylan Guenther;AG;UTA;89;91;91;87;88;92;93
-Brad Marchand;AG;FLA;89;89;89;90;94;86;89
-Alex Ovechkin;AG;WSH;89;83;84;83;87;93;93
-Nick Schmaltz;C;UTA;89;90;89;89;92;85;84
-Evgeni Malkin;C;PIT;89;87;86;91;92;88;85
-Nico Hischier;C;NJD;88;87;86;88;90;87;84
-Brayden Point;C;TBL;88;91;91;92;90;87;87
-Brock Faber;D;MIN;88;89;89;89;90;88;91
-Gustav Forsling;D;FLA;88;85;86;82;83;92;88
-Robert Thomas;C;STL;88;87;89;91;93;86;86
-Logan Cooley;C;UTA;88;93;94;88;90;87;84
-Leo Carlsson;C;ANA;88;90;90;90;89;86;88
-Shea Theodore;D;VGK;88;88;88;89;92;89;90
-Ivan Demidov;AD;MTL;88;89;88;90;91;88;89
-Thomas Harley;D;DAL;88;91;90;91;90;86;89
-Mikhail Sergachev;D;UTA;88;88;91;88;90;91;91
-Bo Horvat;C;NYI;88;89;91;89;90;91;92
-Mathew Barzal;C;NYI;88;90;89;93;91;86;85
-Andrei Svechnikov;AD;CAR;88;87;88;89;91;90;91
-Matthew Knies;AG;TOR;88;86;86;88;88;86;86
-Tom Wilson;AD;WSH;88;87;88;85;85;90;88
-Travis Sanheim;D;PHI;88;90;91;86;86;88;87
-Vincent Trocheck;C;UTA;88;85;86;88;90;85;82
-Jake Oettinger;G;DAL;88;;;;;;
-Jackson LaCombe;D;ANA;88;90;90;90;91;88;86
-Noah Hanifin;D;VGK;88;88;89;87;90;87;88
-K'Andre Miller;D;CAR;88;88;89;85;86;87;89
-John Tavares;C;TOR;88;88;87;91;89;86;85
-Michael Matheson;D;MTL;88;88;89;89;87;87;86
-Erik Karlsson;D;PIT;88;91;91;93;92;92;90
-Alex Tuch;AD;WSH;88;88;90;85;88;89;91
-Travis Konecny;AD;PHI;88;90;89;91;92;89;89
-Ryan Pulock;D;NYI;88;84;84;86;85;93;83
-Dylan Strome;C;WSH;87;86;85;89;92;85;85
-Jesper Wallstedt;G;MIN;87;;;;;;
-Gabe Vilardi;C;WPG;87;86;87;89;89;88;87
-Cutter Gauthier;AG;ANA;87;91;91;86;88;92;93
-Scott Wedgewood;G;COL;87;;;;;;
-Kevin Fiala;AG;LAK;87;88;87;92;90;91;91
-Roope Hintz;C;DAL;87;88;89;86;89;86;86
-Devon Toews;D;COL;87;87;87;86;89;86;87
-Troy Terry;AD;ANA;87;91;90;91;91;86;87
-Rasmus Andersson;D;VGK;87;89;89;86;88;91;89
-Lukas Dostal;G;ANA;87;;;;;;
-Dustin Wolf;G;CGY;87;;;;;;
-Joel Eriksson Ek;C;MIN;87;84;85;84;85;86;86
-Drake Batherson;AD;OTT;87;86;86;89;91;89;89
-Juraj Slafkovsky;AG;MTL;87;87;86;89;90;87;87
-Morgan Geekie;C;BOS;87;86;86;89;88;93;90
-Will Smith;C;SJS;87;87;87;86;92;88;89
-Darren Raddysh;D;TOR;87;89;88;91;92;93;90
-Brett Pesce;D;NJD;87;83;82;84;85;87;86
-Mika Zibanejad;C;NYR;87;86;86;87;88;89;88
-Brandt Clarke;D;LAK;87;88;86;90;92;83;84
-Bowen Byram;D;CHI;87;92;91;89;87;85;85
-Spencer Knight;G;CHI;87;;;;;;
-Pavel Dorofeyev;AG;NYR;87;86;85;87;85;92;91
-Thomas Chabot;D;OTT;87;90;89;90;89;89;87
-Filip Hronek;D;VAN;87;87;86;87;90;89;87
-Adam Pelech;D;NYI;87;83;83;85;82;84;84
-Trevor Zegras;C;PHI;87;88;87;90;91;86;87
-Esa Lindell;D;DAL;87;83;83;82;85;82;82
-John Carlson;D;TBL;87;87;86;90;91;92;85
-Shayne Gostisbehere;D;CAR;87;86;85;91;91;91;90
-Zach Hyman;AG;EDM;87;87;88;86;86;86;86
-Mikael Granlund;C;ANA;87;86;85;89;90;84;86
-Matt Duchene;C;DAL;87;87;86;90;91;84;83
-Ryan O'Reilly;C;NSH;87;83;84;85;90;84;81
-Adam Fantilli;C;CBJ;86;90;90;89;89;89;90
-Sam Bennett;C;FLA;86;89;88;89;88;86;88
-Matvei Michkov;AD;PHI;86;86;85;90;90;84;85
-MacKenzie Weegar;D;UTA;86;88;87;89;91;87;87
-Elias Pettersson;C;VAN;86;85;84;90;90;89;88
-Luke Hughes;D;NJD;86;91;93;92;88;86;89
-Beckett Sennecke;AG;ANA;86;88;89;88;90;91;89
-Jordan Kyrou;AD;WSH;86;91;90;91;88;89;91
-Vince Dunn;D;SEA;86;88;87;90;93;90;90
-Juuse Saros;G;NSH;86;;;;;;
-J.T. Miller;C;NYR;86;84;85;89;92;90;87
-Brandon Bussi;G;CAR;86;;;;;;
-Jakub Dobeš;G;MTL;86;;;;;;
-William Eklund;AG;OTT;86;87;86;89;90;86;86
-Dylan Cozens;C;OTT;86;89;89;88;87;88;88
-JJ Peterka;AD;BOS;86;89;88;86;89;88;90
-Ivan Barbashev;AG;VGK;86;85;86;87;89;87;86
-Seth Jones;D;FLA;86;87;86;88;88;89;88
-Josh Doan;AD;BUF;86;86;87;86;87;87;88
-Aliaksei Protas;C;WSH;86;88;88;86;87;88;89
-Filip Gustavsson;G;MIN;86;;;;;;
-Mackenzie Blackwood;G;COL;86;;;;;;
-Owen Power;D;BUF;86;89;88;90;89;84;85
-Brandon Montour;D;SEA;86;90;91;88;89;92;90
-Jet Greaves;G;CBJ;86;;;;;;
-Rickard Rakell;AD;PIT;86;85;86;85;88;87;85
-Pierre-Luc Dubois;C;WSH;86;85;86;85;89;86;86
-Anton Lundell;C;FLA;86;85;84;86;87;84;85
-Colton Parayko;D;STL;86;89;90;86;85;88;85
-Jared McCann;C;SEA;86;86;86;86;89;91;91
-Vladislav Gavrikov;D;NYR;86;84;84;82;85;88;87
-Aaron Ekblad;D;FLA;86;84;84;84;85;84;83
-Brady Skjei;D;NSH;86;87;88;83;85;85;84
-Bryan Rust;AD;PIT;86;87;87;85;88;88;86
-Nazem Kadri;C;COL;86;89;88;91;90;85;86
-Ryan Nugent-Hopkins;C;EDM;86;85;85;88;90;85;84
-Damon Severson;D;CBJ;86;84;84;84;87;88;85
-Dougie Hamilton;D;NJD;86;86;85;87;89;91;91
-Mattias Ekholm;D;EDM;86;86;85;87;87;88;84
-Jonas Brodin;D;MIN;86;83;83;84;85;84;84
-Justin Faulk;D;DET;86;89;89;90;88;89;87
-Martin Fehervary;D;WSH;86;86;86;83;84;84;83
-Jake McCabe;D;TOR;86;85;85;85;86;86;83
-Mattias Samuelsson;D;BUF;86;84;85;82;82;86;87
-Jonas Siegenthaler;D;NJD;86;82;82;82;82;82;82
-Josh Manson;D;COL;86;86;86;85;86;86;85
-Dylan DeMelo;D;WPG;86;83;83;84;86;83;82
-Patrick Kane;AD;CHI;86;89;88;89;92;83;85
-Steven Stamkos;C;NSH;86;85;86;86;88;93;90
-Oliver Ekman-Larsson;D;TOR;86;85;84;86;89;88;90
-Mats Zuccarello;AD;LAK;86;83;82;86;92;86;87
-Anthony Cirelli;C;TBL;85;85;86;84;86;83;82
-Brock Nelson;C;COL;85;88;89;88;88;90;88
-Carter Verhaeghe;AG;FLA;85;88;89;88;89;85;87
-Quinton Byfield;C;LAK;85;91;91;90;87;89;90
-Timo Meier;AD;NJD;85;88;87;87;86;90;91
-Dylan Holloway;AG;STL;85;89;88;89;88;88;91
-Jimmy Snuggerud;AD;STL;85;85;85;87;86;88;89
-Logan Stankoven;C;CAR;85;88;87;87;88;84;85
-Linus Ullmark;G;OTT;85;;;;;;
-Tomas Hertl;C;VGK;85;83;83;88;88;85;84
-Morgan Rielly;D;TOR;85;89;88;87;91;82;85
-Brock Boeser;AD;VAN;85;83;83;85;87;92;91
-Jake Walman;D;EDM;85;87;87;87;87;90;86
-Karel Vejmelka;G;UTA;85;;;;;;
-Darnell Nurse;D;SJS;85;89;90;84;86;90;90
-Matt Coronato;AD;CGY;85;88;87;87;88;87;90
-Pavel Zacha;C;BOS;85;86;86;87;88;87;85
-Owen Tippett;AD;PHI;85;92;94;86;86;90;92
-Rasmus Sandin;D;WSH;85;89;88;88;88;83;86
-Joel Hofer;G;STL;85;;;;;;
-Morgan Frost;C;CGY;85;88;87;89;88;82;82
-Alexis Lafrenière;AG;NYR;85;87;86;88;88;84;86
-Mason McTavish;C;STL;85;86;85;88;89;89;89
-Marco Rossi;C;VAN;85;86;86;88;90;86;86
-Ryan McLeod;C;BUF;85;88;88;89;90;82;82
-Luke Evangelista;AD;NSH;85;86;85;88;91;82;83
-Dan Vladar;G;PHI;85;;;;;;
-Jacob Middleton;D;CGY;85;84;84;83;83;82;82
-Philip Broberg;D;STL;85;89;90;86;85;84;84
-Denton Mateychuk;D;CBJ;85;88;88;86;85;83;84
-Alexander Nikishin;D;CAR;85;87;88;86;85;93;92
-Niko Mikkola;D;FLA;85;84;84;83;82;82;82
-Sam Malinski;D;COL;85;89;90;88;89;90;92
-Mason Marchment;AG;SJS;85;85;84;87;89;86;87
-Alexander Wennberg;C;SJS;85;84;83;89;89;83;81
-Marcus Pettersson;D;NYR;85;83;83;84;84;84;82
-Brandon Carlo;D;STL;85;82;82;81;82;83;82
-John Marino;D;UTA;85;85;86;87;88;84;82
-Anthony Mantha;AD;NJD;85;86;86;84;86;90;88
-Adam Larsson;D;SEA;85;84;84;82;85;87;84
-Ivan Provorov;D;CBJ;85;88;87;87;87;86;87
-Sergei Bobrovsky;G;TOR;85;;;;;;
-John Gibson;G;DET;85;;;;;;
-Nicolas Hague;D;NSH;85;82;82;83;83;86;85
-Nikita Zadorov;D;BOS;85;89;91;85;83;91;90
-Jamie Oleksiak;D;VAN;85;85;85;82;84;86;85
-Mason Lohrei;D;BOS;85;87;86;88;88;83;85
-Samuel Girard;D;PIT;85;88;87;86;87;83;82
-Hampus Lindholm;D;BOS;85;86;85;87;86;84;85
-Brayden McNabb;D;VGK;85;82;82;83;84;86;85
-J.J. Moser;D;TBL;85;86;85;86;86;83;83
-Shane Pinto;C;OTT;85;88;87;85;84;88;87
-Brenden Dillon;D;NJD;85;83;83;84;84;86;84
-Mikey Anderson;D;LAK;85;84;83;83;83;83;82
-Erik Cernak;D;TBL;85;82;82;83;82;83;83
-Gabriel Landeskog;AG;COL;85;84;83;88;85;86;84
-Artem Zub;D;OTT;85;83;83;82;83;85;84
-Taylor Hall;AG;CAR;85;87;87;88;89;84;84
-Kaiden Guhle;D;MTL;85;84;84;84;83;85;86
-Dmitry Orlov;D;SJS;85;86;85;86;88;85;83
-Johnathan Kovacevic;D;NJD;85;82;82;82;82;85;83
-Charlie Coyle;C;CBJ;85;84;84;85;86;83;82
-Christopher Tanev;D;TOR;85;82;82;84;85;86;85
-Jordan Eberle;AD;SEA;85;87;86;86;88;84;84
-Connor Murphy;D;EDM;85;82;82;82;82;84;83
-Drew Doughty;D;LAK;85;86;85;87;88;88;86
-Blake Coleman;C;MIN;85;86;85;83;83;84;83
-Kris Letang;D;PIT;85;87;86;88;91;85;83
-Claude Giroux;C;OTT;85;84;84;86;91;86;83
-Brent Burns;D;COL;85;84;84;85;87;91;92
-Jackson Blake;AD;CAR;84;86;86;89;88;82;83
-Matty Beniers;C;SEA;84;86;85;89;86;85;88
-Simon Edvinsson;D;DET;84;87;86;86;84;83;83
-Frank Nazar;C;CHI;84;90;92;86;87;87;86
-Simon Nemec;D;CGY;84;87;86;86;85;85;86
-Jacob Trouba;D;SJS;84;82;82;82;84;88;86
-Jordan Staal;C;CAR;84;82;83;84;83;83;82
-Jacob Markstrom;G;FLA;84;;;;;;
-Valeri Nichushkin;AD;CBJ;84;89;89;87;85;86;85
-Artturi Lehkonen;AG;COL;84;85;86;85;86;86;85
-Tyler Toffoli;AD;SJS;84;82;82;84;86;87;88
-Thatcher Demko;G;VAN;84;;;;;;
-Conor Garland;AD;CBJ;84;86;85;89;88;85;84
-Pavel Buchnevich;AG;STL;84;85;84;85;89;85;83
-Josh Norris;C;BUF;84;85;85;87;89;86;86
-Elias Lindholm;C;BOS;84;82;82;85;87;86;86
-Darcy Kuemper;G;LAK;84;;;;;;
-Brayden Schenn;C;NYI;84;85;85;88;87;86;85
-William Karlsson;C;VGK;84;84;84;86;84;83;85
-Dylan Samberg;D;WPG;84;83;83;85;84;85;86
-Alex Vlasic;D;CHI;84;87;87;85;85;84;84
-Yaroslav Askarov;G;SJS;84;;;;;;
-Zach Benson;AG;BUF;84;85;84;86;87;82;83
-Jack Quinn;AD;BUF;84;90;89;88;88;88;89
-Porter Martone;AD;PHI;84;88;89;87;86;89;89
-Radko Gudas;D;FLA;84;82;82;82;83;88;86
-Matt Roy;D;WSH;84;84;85;83;85;86;84
-Cam York;D;PHI;84;85;84;86;85;83;83
-Alex Laferriere;AD;LAK;84;90;89;85;85;86;89
-Olen Zellweger;D;BUF;84;89;89;88;85;86;88
-Sean Walker;D;CAR;84;89;90;85;84;87;89
-Jake DeBrusk;AG;VAN;84;86;87;84;85;86;86
-Dmitri Voronkov;AG;CBJ;84;84;83;85;86;85;84
-Chandler Stephenson;C;SEA;84;88;89;87;90;83;82
-Tyler Bertuzzi;AG;CHI;84;83;83;86;87;85;83
-Sean Durzi;D;NYR;84;88;87;85;87;85;87
-Connor McMichael;C;STL;84;89;89;85;86;85;84
-Neal Pionk;D;WPG;84;84;83;86;87;87;86
-Noah Cates;AG;PHI;84;83;82;85;83;82;83
-Mikael Backlund;C;CGY;84;84;83;85;85;86;85
-Eetu Luostarinen;C;FLA;84;83;82;82;84;81;81
-Sean Couturier;C;PHI;84;84;83;84;85;84;82
-Alex Lyon;G;BUF;84;;;;;;
-Anders Lee;AG;UTA;84;;;;;;
-Braden Schneider;D;NYR;84;;;;;;
-Casey Mittelstadt;C;BOS;84;;;;;;
-Drew Helleson;D;ANA;84;;;;;;
-Emmitt Finnie;C;DET;84;;;;;;
-Evan Rodrigues;C;NJD;84;;;;;;
-Ian Cole;D;CHI;84;;;;;;
-Jake Neighbours;AG;STL;84;;;;;;
-Jalen Chatfield;D;CAR;84;;;;;;
-Jamie Drysdale;D;PHI;84;;;;;;
-Jared Spurgeon;D;MIN;84;;;;;;
-Jeremy Lauzon;D;VGK;84;;;;;;
-Joseph Woll;G;PHI;84;;;;;;
-Kent Johnson;C;CBJ;84;;;;;;
-Kevin Bahl;D;CGY;84;;;;;;
-Mario Ferraro;D;WPG;84;;;;;;
-Mathieu Olivier;AD;CBJ;84;;;;;;
-Oliver Kapanen;C;MTL;84;;;;;;
-Parker Wotherspoon;D;VGK;84;;;;;;
-Ryan McDonagh;D;TBL;84;;;;;;
-Simon Holmstrom;AD;NYI;84;;;;;;
-Tyler Myers;D;DAL;84;;;;;;
-Tyler Seguin;C;DAL;84;;;;;;
-Vasily Podkolzin;AD;EDM;84;;;;;;
-Viktor Arvidsson;AG;DET;84;;;;;;
-Yegor Chinakhov;AD;PIT;84;;;;;;
-Aatu Raty;C;TOR;83;;;;;;
-Adam Lowry;C;WPG;83;;;;;;
-Alex Nedeljkovic;G;SJS;83;;;;;;
-Alex Newhook;C;MTL;83;;;;;;
-Alexander Romanov;D;NYI;83;;;;;;
-Alexandre Carrier;D;MTL;83;;;;;;
-Anton Frondell;C;CHI;83;;;;;;
-Arseny Gritsyuk;AD;NJD;83;;;;;;
-Arvid Soderblom;G;CHI;83;;;;;;
-Barrett Hayton;C;UTA;83;;;;;;
-Ben Chiarot;D;DET;83;;;;;;
-Bobby McMann;C;SEA;83;;;;;;
-Boone Jenner;C;WSH;83;;;;;;
-Brandon Duhaime;AD;TOR;83;;;;;;
-Brett Kulak;D;COL;83;;;;;;
-Cam Fowler;D;STL;83;;;;;;
-Carter Hart;G;VGK;83;;;;;;
-Chris Kreider;AG;MTL;83;;;;;;
-Christian Dvorak;AG;PHI;83;;;;;;
-Cole Perfetti;C;WPG;83;;;;;;
-Cole Sillinger;C;CBJ;83;;;;;;
-Collin Graf;AD;SJS;83;;;;;;
-Connor Brown;AD;NJD;83;;;;;;
-Connor Zary;C;CGY;83;;;;;;
-Conor Geekie;C;TBL;83;;;;;;
-Dawson Mercer;C;WPG;83;;;;;;
-Drew O'Connor;AG;VAN;83;;;;;;
-Easton Cowan;AD;TOR;83;;;;;;
-Eeli Tolvanen;AD;NYR;83;;;;;;
-Filip Chytil;C;VAN;83;;;;;;
-Fraser Minten;C;BOS;83;;;;;;
-Frederik Andersen;G;EDM;83;;;;;;
-Ian Moore;D;ANA;83;;;;;;
-Jack Roslovic;C;TOR;83;;;;;;
-Jake Allen;G;NJD;83;;;;;;
-Jake Evans;C;MTL;83;;;;;;
-Jason Zucker;AG;BUF;83;;;;;;
-Joel Edmundson;D;LAK;83;;;;;;
-Joel Kiviranta;AG;DAL;83;;;;;;
-Joey Daccord;G;SEA;83;;;;;;
-Jonathan Huberdeau;AG;CGY;83;;;;;;
-Jonathan Marchessault;C;NSH;83;;;;;;
-Jordan Binnington;G;STL;83;;;;;;
-Jordan Spence;D;OTT;83;;;;;;
-Justin Brazeau;AD;PIT;83;;;;;;
-Justin Sourdif;AD;WSH;83;;;;;;
-Kaapo Kakko;AD;SEA;83;;;;;;
-Kaedan Korczak;D;PIT;83;;;;;;
-Kiefer Sherwood;AG;SJS;83;;;;;;
-Mackie Samoskevich;AD;SEA;83;;;;;;
-Marat Khusnutdinov;C;BOS;83;;;;;;
-Marcus Foligno;AG;MIN;83;;;;;;
-Matias Maccelli;AG;NYI;83;;;;;;
-Mavrik Bourque;C;NSH;83;;;;;;
-Max Domi;C;TOR;83;;;;;;
-Michael Amadio;AD;OTT;83;;;;;;
-Michael Kesselring;D;SJS;83;;;;;;
-Nate Schmidt;D;UTA;83;;;;;;
-Nicholas Paul;AG;TOR;83;;;;;;
-Nick Blankenburg;D;TOR;83;;;;;;
-Nick Perbix;D;NSH;83;;;;;;
-Nick Seeler;D;PHI;83;;;;;;
-Nino Niederreiter;AD;WPG;83;;;;;;
-Oliver Bjorkstrand;AD;NYR;83;;;;;;
-Olli Maatta;D;MIN;83;;;;;;
-Peyton Krebs;C;BUF;83;;;;;;
-Phillip Danault;C;MTL;83;;;;;;
-Pius Suter;C;STL;83;;;;;;
-Ridly Greig;C;OTT;83;;;;;;
-Ryan Donato;C;CHI;83;;;;;;
-Ryan Hartman;AD;MIN;83;;;;;;
-Ryan Shea;D;EDM;83;;;;;;
-Samuel Helenius;C;LAK;83;;;;;;
-Sean Monahan;C;CBJ;83;;;;;;
-Stuart Skinner;G;WPG;83;;;;;;
-Tommy Novak;C;PIT;83;;;;;;
-Tony DeAngelo;D;NYI;83;;;;;;
-Trevor Moore;AG;LAK;83;;;;;;
-Tyler Kleven;D;OTT;83;;;;;;
-Tyson Foerster;AD;PHI;83;;;;;;
-Ukko-Pekka Luukkonen;G;BUF;83;;;;;;
-Uvis Balinskis;D;FLA;83;;;;;;
-Vinnie Hinostroza;C;COL;83;;;;;;
-Warren Foegele;AG;OTT;83;;;;;;
-Will Borgen;D;BOS;83;;;;;;
-Will Cuylle;AG;NYR;83;;;;;;
-Yakov Trenin;C;MIN;83;;;;;;
-Yanni Gourde;C;TBL;83;;;;;;
-Zach Whitecloud;D;CGY;83;;;;;;
-Zemgus Girgensons;C;TBL;83;;;;;;
-A.J. Greer;AG;ANA;82;;;;;;
-Alberts Smits;D;NYR;82;;;;;;
-Alex Iafallo;AG;WPG;82;;;;;;
-Alexander Kerfoot;C;NSH;82;;;;;;
-Andre Burakovsky;AG;OTT;82;;;;;;
-Andrei Kuzmenko;AG;PIT;82;;;;;;
-Andrew Copp;C;DET;82;;;;;;
-Arturs Silovs;G;PIT;82;;;;;;
-Bobby Brink;AD;MIN;82;;;;;;
-Brett Howden;C;VGK;82;;;;;;
-Brian Dumoulin;D;LAK;82;;;;;;
-Charle-Edouard D'Astous;D;TBL;82;;;;;;
-Cody Ceci;D;LAK;82;;;;;;
-Cole Schwindt;AD;FLA;82;;;;;;
-Colton Sissons;C;TOR;82;;;;;;
-Connor Clifton;D;BOS;82;;;;;;
-Corey Perry;AD;LAK;82;;;;;;
-Daniil But;AG;UTA;82;;;;;;
-Danila Yurov;AD;MIN;82;;;;;;
-Dante Fabbro;D;CBJ;82;;;;;;
-David Perron;AG;DAL;82;;;;;;
-Devin Cooley;G;CGY;82;;;;;;
-Dylan Garand;G;NYR;82;;;;;;
-Emil Heineman;AG;NYI;82;;;;;;
-Ethen Frank;C;WSH;82;;;;;;
-Fabian Zetterlund;AG;OTT;82;;;;;;
-Fedor Svechkov;C;COL;82;;;;;;
-Frederick Gaudreau;C;SEA;82;;;;;;
-Gabe Perreault;AD;NYR;82;;;;;;
-Gage Goncalves;C;TBL;82;;;;;;
-Henri Jokiharju;D;BOS;82;;;;;;
-Igor Chernyshov;AG;SJS;82;;;;;;
-Ilya Mikheyev;AD;TBL;82;;;;;;
-Jack Drury;C;NSH;82;;;;;;
-Jack McBain;C;UTA;82;;;;;;
-Jacob Bryson;D;DET;82;;;;;;
-Jaden Schwartz;C;COL;82;;;;;;
-Jamie Benn;AG;DAL;82;;;;;;
-Jason Dickinson;C;EDM;82;;;;;;
-Jordan Martinook;AG;CAR;82;;;;;;
-Justin Barron;D;STL;82;;;;;;
-Juuso Pärssinen;C;NYR;82;;;;;;
-Keegan Kolesar;AD;DET;82;;;;;;
-Kevin Lankinen;G;VAN;82;;;;;;
-Kirby Dach;C;MTL;82;;;;;;
-Kyle Palmieri;C;NYI;82;;;;;;
-Lars Eller;C;FLA;82;;;;;;
-Lawson Crouse;AG;UTA;82;;;;;;
-Linus Karlsson;C;VAN;82;;;;;;
-Logan Stanley;D;NYI;82;;;;;;
-Louis Crevier;D;BUF;82;;;;;;
-Luke Schenn;D;VAN;82;;;;;;
-Matt Savoie;C;EDM;82;;;;;;
-Michael Bunting;AG;PHI;82;;;;;;
-Michael Carcone;AG;UTA;82;;;;;;
-Morgan Barron;C;WPG;82;;;;;;
-Nic Dowd;C;VGK;82;;;;;;
-Nicholas Robertson;AG;PIT;82;;;;;;
-Nick Foligno;AG;MIN;82;;;;;;
-Nick Jensen;D;ANA;82;;;;;;
-Nicolas Roy;C;COL;82;;;;;;
-Noah Laba;C;NYR;82;;;;;;
-Noel Acciari;C;PHI;82;;;;;;
-Parker Kelly;C;COL;82;;;;;;
-Pavel Mintyukov;D;ANA;82;;;;;;
-Philipp Grubauer;G;SEA;82;;;;;;
-Pyotr Kochetkov;G;CAR;82;;;;;;
-Ross Colton;C;NSH;82;;;;;;
-Ryan Lindgren;D;SEA;82;;;;;;
-Ryan Poehling;C;ANA;82;;;;;;
-Samuel Ersson;G;OTT;82;;;;;;
-Scott Mayfield;D;NYI;82;;;;;;
-Teddy Blueger;C;TOR;82;;;;;;
-Teuvo Teravainen;C;CHI;82;;;;;;
-Tim Washe;C;ANA;82;;;;;;
-Timothy Liljegren;D;WSH;82;;;;;;
-Trevor van Riemsdyk;D;PIT;82;;;;;;
-Troy Stecher;D;TOR;82;;;;;;
-Tyler Tucker;D;STL;82;;;;;;
-Tyson Kozak;C;BUF;82;;;;;;
-Victor Olofsson;AG;VGK;82;;;;;;
-Vincent Desharnais;D;WSH;82;;;;;;
-Yegor Sharangovich;C;CGY;82;;;;;;
-Zach Bogosian;D;MIN;82;;;;;;
-Zack Bolduc;AD;MTL;82;;;;;;
-Zeev Buium;D;VAN;82;;;;;;
-Adam Gaudette;AD;SJS;81;;;;;;
-Alex Bump;AG;PHI;81;;;;;;
-Alex Killorn;AG;ANA;81;;;;;;
-Alex Turcotte;C;LAK;81;;;;;;
-Alexandre Texier;AG;MTL;81;;;;;;
-Alexey Toropchenko;AD;STL;81;;;;;;
-Andrew Peeke;D;UTA;81;;;;;;
-Anthony Beauvillier;AG;WSH;81;;;;;;
-Anthony Duclair;AG;NYI;81;;;;;;
-Anthony Stolarz;G;TOR;81;;;;;;
-Anton Forsberg;G;LAK;81;;;;;;
-Arber Xhekaj;D;MTL;81;;;;;;
-Artyom Levshunov;D;CHI;81;;;;;;
-Axel Sandin-Pellikka;D;DET;81;;;;;;
-Aydar Suniev;AG;CGY;81;;;;;;
-Beck Malenstyn;AG;BUF;81;;;;;;
-Berkly Catton;C;SEA;81;;;;;;
-Braeden Bowman;AD;VGK;81;;;;;;
-Brendan Gallagher;AD;VAN;81;;;;;;
-Cale Fleury;D;SEA;81;;;;;;
-Carson Soucy;D;CBJ;81;;;;;;
-Casey Cizikas;C;NYI;81;;;;;;
-Cayden Primeau;G;CAR;81;;;;;;
-Charles-Alexis Legault;D;CAR;81;;;;;;
-Cody Glass;C;NJD;81;;;;;;
-Cole Smith;AG;CHI;81;;;;;;
-Dakota Joshua;C;TOR;81;;;;;;
-Declan Chisholm;D;NJD;81;;;;;;
-Devon Levi;G;EDM;81;;;;;;
-Dmitry Kulikov;D;FLA;81;;;;;;
-Donovan Sebrango;D;FLA;81;;;;;;
-Elias Pettersson;D;VAN;81;;;;;;
-Elvis Merzlikins;G;TOR;81;;;;;;
-Emil Lilleberg;D;TBL;81;;;;;;
-Erik Haula;AG;LAK;81;;;;;;
-Ethan Del Mastro;D;CHI;81;;;;;;
-Frank Vatrano;AD;ANA;81;;;;;;
-Hendrix Lapierre;C;PIT;81;;;;;;
-Isac Lundestrom;C;CBJ;81;;;;;;
-Ivan Miroshnichenko;AG;WSH;81;;;;;;
-J.T. Compher;AG;DET;81;;;;;;
-Jake Christiansen;D;CBJ;81;;;;;;
-Jayden Struble;D;NSH;81;;;;;;
-Jean-Gabriel Pageau;C;NYI;81;;;;;;
-Joe Veleno;C;NYR;81;;;;;;
-Joel Armia;AD;LAK;81;;;;;;
-Joel Farabee;AG;CGY;81;;;;;;
-Jonatan Berggren;AD;STL;81;;;;;;
-Jonny Brodzinski;C;WSH;81;;;;;;
-Joonas Korpisalo;G;NYR;81;;;;;;
-Jordan Greenway;AG;CHI;81;;;;;;
-Josh Anderson;AD;MTL;81;;;;;;
-Justus Annunen;G;NSH;81;;;;;;
-Kasperi Kapanen;AD;EDM;81;;;;;;
-Kevin Korchinski;D;CHI;81;;;;;;
-Lian Bichsel;D;DAL;81;;;;;;
-Matt Grzelcyk;D;BUF;81;;;;;;
-Maxim Shabanov;AD;MIN;81;;;;;;
-Michael McCarron;AD;MIN;81;;;;;;
-Nick Bjugstad;C;WPG;81;;;;;;
-Nick Cousins;C;OTT;81;;;;;;
-Nikita Klepov;AD;ANA;81;;;;;;
-Nils Lundkvist;D;DAL;81;;;;;;
-Oliver Moore;C;CHI;81;;;;;;
-Oskar Sundqvist;C;STL;81;;;;;;
-Paul Cotter;C;VAN;81;;;;;;
-Radek Faksa;C;DAL;81;;;;;;
-Rasmus Ristolainen;D;PHI;81;;;;;;
-Ryan Leonard;AD;WSH;81;;;;;;
-Ryan Strome;C;CGY;81;;;;;;
-Ryker Evans;D;SEA;81;;;;;;
-Sam Carrick;C;BUF;81;;;;;;
-Sam Lafferty;C;FLA;81;;;;;;
-Sam Steel;C;DAL;81;;;;;;
-Samuel Honzek;AG;CGY;81;;;;;;
-Sean Kuraly;C;BOS;81;;;;;;
-Semyon Varlamov;G;NYI;81;;;;;;
-Shakir Mukhamadullin;D;EDM;81;;;;;;
-Simon Benoit;D;PHI;81;;;;;;
-Stefan Noesen;AD;NJD;81;;;;;;
-Stephen Halliday;C;OTT;81;;;;;;
-Steven Lorentz;C;CBJ;81;;;;;;
-Tom Willander;D;VAN;81;;;;;;
-Tyson Jost;C;NSH;81;;;;;;
-Vladislav Namestnikov;C;WPG;81;;;;;;
-William Carrier;AG;CAR;81;;;;;;
-Zayne Parekh;D;CGY;81;;;;;;
-Benjamin Kindel;C;PIT;80;87;86;87;86;86;86
-Adam Edstrom;C;NSH;80;;;;;;
-Adam Wilsby;D;NSH;80;;;;;;
-Adin Hill;G;VGK;80;;;;;;
-Akira Schmid;G;FLA;80;;;;;;
-Albert Johansson;D;DET;80;;;;;;
-Barclay Goodrow;AD;SJS;80;;;;;;
-Blake Lizotte;C;PIT;80;;;;;;
-Brady Martin;C;NSH;80;;;;;;
-Braeden Cootes;C;VAN;80;;;;;;
-Brandon Tanev;AG;UTA;80;;;;;;
-Brayden Pachal;D;CGY;80;;;;;;
-Calum Ritchie;C;NYI;80;;;;;;
-Cam Talbot;G;CBJ;80;;;;;;
-Carl Grundstrom;AD;PHI;80;;;;;;
-Casey DeSmith;G;DAL;80;;;;;;
-Charlie Lindgren;G;WSH;80;;;;;;
-Cole Koepke;AG;WPG;80;;;;;;
-Colin Blackwell;C;DAL;80;;;;;;
-Colten Ellis;G;BUF;80;;;;;;
-Colton Dach;C;EDM;80;;;;;;
-Connor Dewar;C;PIT;80;;;;;;
-Conor Timmins;D;BUF;80;;;;;;
-Dalibor Dvorsky;AD;STL;80;;;;;;
-Daniil Tarasov;G;DET;80;;;;;;
-Danton Heinen;AG;CBJ;80;;;;;;
-Declan Carlile;D;PIT;80;;;;;;
-Dominic James;C;TBL;80;;;;;;
-Drew Fortescue;D;NYR;80;;;;;;
-Elmer Soderblom;AG;PIT;80;;;;;;
-Emil Andrae;D;CBJ;80;;;;;;
-Eric Comrie;G;SJS;80;;;;;;
-Eric Robinson;AG;CAR;80;;;;;;
-Fabian Lysell;AD;COL;80;;;;;;
-Filip Hallander;C;EDM;80;;;;;;
-Harrison Brunicke;D;PIT;80;;;;;;
-Haydn Fleury;D;WPG;80;;;;;;
-Ilya Lyubushkin;D;NSH;80;;;;;;
-Jacob Bernard-Docker;D;DET;80;;;;;;
-Jacob Fowler;G;MTL;80;;;;;;
-Jansen Harkins;C;TBL;80;;;;;;
-Jesper Boqvist;C;NJD;80;;;;;;
-Jiri Kulich;C;BUF;80;;;;;;
-Joel Hanley;D;CGY;80;;;;;;
-Johnny Beecher;C;FLA;80;;;;;;
-Joshua Mahura;D;SEA;80;;;;;;
-Justin Holl;D;WSH;80;;;;;;
-Justin Hryckowian;C;DAL;80;;;;;;
-Kevin Stenlund;C;UTA;80;;;;;;
-Leevi Merilainen;G;VAN;80;;;;;;
-Liam O'Brien;C;UTA;80;;;;;;
-Liam Öhgren;AG;VAN;80;;;;;;
-Logan O'Connor;AD;COL;80;;;;;;
-Luke Glendening;C;NYR;80;;;;;;
-Mark Jankowski;C;CAR;80;;;;;;
-Martin Pospisil;C;CGY;80;;;;;;
-Mason Appleton;C;DET;80;;;;;;
-Mathieu Joseph;AD;EDM;80;;;;;;
-Matt Tomkins;G;EDM;80;;;;;;
-Mattias Janmark;C;EDM;80;;;;;;
-Max Sasson;C;VAN;80;;;;;;
-Maxwell Crozier;D;TBL;80;;;;;;
-Michael DiPietro;G;BOS;80;;;;;;
-Michael Eyssimont;C;BOS;80;;;;;;
-Michael Rasmussen;C;DET;80;;;;;;
-Miles Wood;AG;TOR;80;;;;;;
-Nate Danielson;C;DET;80;;;;;;
-Nathan Bastian;AD;FLA;80;;;;;;
-Nico Sturm;C;MIN;80;;;;;;
-Nicolas Deslauriers;AG;CAR;80;;;;;;
-Nils Hoglander;AG;NSH;80;;;;;;
-Noah Gregor;AG;WPG;80;;;;;;
-Noah Ostlund;C;BUF;80;;;;;;
-Oasiz Wiesblatt;C;NSH;80;;;;;;
-Ondrej Palat;AG;NYI;80;;;;;;
-Oskar Back;C;DAL;80;;;;;;
-Philippe Myers;D;TOR;80;;;;;;
-Pierre Engvall;AG;NYI;80;;;;;;
-Pierre-Olivier Joseph;D;CAR;80;;;;;;
-Pontus Holmberg;AD;TBL;80;;;;;;
-Raphael Lavoie;C;VGK;80;;;;;;
-Roger McQueen;C;ANA;80;;;;;;
-Rutger McGroarty;AD;PIT;80;;;;;;
-Ryan Graves;D;PIT;80;;;;;;
-Ryan Lomberg;AG;CBJ;80;;;;;;
-Sam Dickinson;D;SJS;80;;;;;;
-Sam Montembeault;G;MTL;80;;;;;;
-Scott Laughton;AG;LAK;80;;;;;;
-Taylor Raddysh;AD;NYR;80;;;;;;
-Taylor Ward;AD;LAK;80;;;;;;
-Tristan Jarry;G;EDM;80;;;;;;
-Ty Dellandrea;C;SJS;80;;;;;;
-Ty Emberson;D;EDM;80;;;;;;
-Tye Kartye;AG;NYR;80;;;;;;
-Tyson Hinds;D;ANA;80;;;;;;
-Ville Koivunen;AD;PIT;80;;;;;;
-Wyatt Kaiser;D;CHI;80;;;;;;
-Alex Barre-Boulet;C;SJS;79;;;;;;
-Bo Groulx;C;TOR;79;;;;;;
-David Jiricek;D;PHI;79;;;;;;
-Dmitri Simashev;D;UTA;79;;;;;;
-Erik Gudbranson;D;CBJ;79;;;;;;
-Erik Gustafsson;D;LAK;79;;;;;;
-Filip Bystedt;C;SJS;79;;;;;;
-Ilya Protas;AG;WSH;79;;;;;;
-Isaak Phillips;D;WPG;79;;;;;;
-Jacob Quillan;C;VAN;79;;;;;;
-Jesperi Kotkaniemi;C;CAR;79;;;;;;
-John Leonard;AG;DET;79;;;;;;
-Jonah Gadjovich;AG;FLA;79;;;;;;
-Kailer Yamamoto;AD;UTA;79;;;;;;
-Konsta Helenius;C;BUF;79;;;;;;
-Luca Del Bel Belluz;C;CBJ;79;;;;;;
-Marco Kasper;C;DET;79;;;;;;
-Matthew Robertson;D;NYR;79;;;;;;
-Matthew Wood;AD;NSH;79;;;;;;
-Nikita Nesterenko;C;ANA;79;;;;;;
-Nikita Tolopilo;G;VAN;79;;;;;;
-Ross Johnston;AG;STL;79;;;;;;
-Rémi Poirier;G;NJD;79;;;;;;
-Scott Perunovich;D;LAK;79;;;;;;
-Tanner Laczynski;C;VGK;79;;;;;;
-Theo Lindstein;D;STL;79;;;;;;
-Tristan Luneau;D;ANA;79;;;;;;
-Zachary L'Heureux;AG;COL;79;;;;;;
-Adam Klapka;AD;CGY;78;;;;;;
-Alexander Petrovic;D;FLA;78;;;;;;
-Atro Leppänen;D;EDM;78;;;;;;
-Caleb Desnoyers;C;UTA;78;;;;;;
-Carson Lambos;D;MIN;78;;;;;;
-Carter Yakemchuk;D;OTT;78;;;;;;
-Cole Hutson;D;WSH;78;;;;;;
-Cole McWard;D;TOR;78;;;;;;
-Cooper Black;G;FLA;78;;;;;;
-Dillon Dube;C;STL;78;;;;;;
-Dylan McIlrath;D;WSH;78;;;;;;
-Georgii Merkulov;C;COL;78;;;;;;
-Henry Thrun;D;WPG;78;;;;;;
-Ilya Samsonov;G;SJS;78;;;;;;
-Jakub Málek;G;NJD;78;;;;;;
-Jani Nyman;AD;SEA;78;;;;;;
-Jeffrey Viel;AG;TBL;78;;;;;;
-Joe Hicketts;D;LAK;78;;;;;;
-Jonathan Lekkerimäki;AD;VAN;78;;;;;;
-Justin Danforth;AD;BUF;78;;;;;;
-Logan Mailloux;D;STL;78;;;;;;
-Matvei Gridin;AD;CGY;78;;;;;;
-Nick DeSimone;D;UTA;78;;;;;;
-Nikolas Matinpalo;D;OTT;78;;;;;;
-Nolan Allan;D;SJS;78;;;;;;
-Reid Schaefer;AG;NSH;78;;;;;;
-Ryan Greene;C;CHI;78;;;;;;
-Sam Rinzel;D;CHI;78;;;;;;
-Sasha Pastujov;AG;MTL;78;;;;;;
-Scott Sabourin;AD;TBL;78;;;;;;
-Trent Frederic;C;EDM;78;;;;;;
-Victor Mancini;D;VAN;78;;;;;;
-Vincent Iorio;D;NYR;78;;;;;;
-Vitek Vanecek;G;NYI;78;;;;;;
-Vladislav Kolyachonok;D;NJD;78;;;;;;
-William Trudeau;D;NSH;78;;;;;;
-Yan Kuznetsov;D;CGY;78;;;;;;
-Zach Metsa;D;BUF;78;;;;;;
-Aleksei Kolosov;G;PHI;77;;;;;;
-Andrew Mangiapane;AG;CHI;77;;;;;;
-Ben Meyers;C;SEA;77;;;;;;
-Bokondji Imama;AG;FLA;77;;;;;;
-Brett Leason;AD;SJS;77;;;;;;
-Cameron Lund;C;SJS;77;;;;;;
-Garnet Hathaway;AD;FLA;77;;;;;;
-Isak Rosen;AD;WPG;77;;;;;;
-James Reimer;G;NYR;77;;;;;;
-Jonas Johansson;G;OTT;77;;;;;;
-Justin Robidas;C;CAR;77;;;;;;
-Kenny Connors;C;LAK;77;;;;;;
-Kurtis MacDermid;AG;OTT;77;;;;;;
-Kyle Capobianco;D;DAL;77;;;;;;
-Kyle MacLean;C;NYI;77;;;;;;
-Landon Slaggert;AG;CHI;77;;;;;;
-Lenni Hämeenaho;AD;NJD;77;;;;;;
-Matt Kiersted;D;MIN;77;;;;;;
-Matt Rempe;C;NYR;77;;;;;;
-Matthew Kessel;D;NYI;77;;;;;;
-Mikael Pyyhtiä;AG;CBJ;77;;;;;;
-Nathan Walker;AG;STL;77;;;;;;
-Sammy Blais;AG;OTT;77;;;;;;
-Sandis Vilmanis;AG;FLA;77;;;;;;
-Sergei Murashov;G;PIT;77;;;;;;
-Simon Lundmark;D;TBL;77;;;;;;
-Tyler Pitlick;AD;MIN;77;;;;;;
-V. Pinchuk;C;NSH;77;;;;;;
-Ville Ottavainen;D;SEA;77;;;;;;
-Zach Dean;C;STL;77;;;;;;
-Zack Ostapchuk;C;SJS;77;;;;;;</script>
+<script type="text/plain" id="liste-lnh">Nom;Position;Équipe;Cote;Stats;XF
+Connor McDavid;C;EDM;99;98 98 98 96 95 92 95 92 98 98 99 99 98 99 97 95 83 80 93 86 95 88 80 65 90;9 14 10
+Nathan MacKinnon;C;COL;97;96 95 93 92 90 91 94 92 96 94 95 94 90 98 89 95 85 80 96 85 90 85 81 70 91;20 2 10
+Nikita Kucherov;AD;TBL;97;90 90 92 95 85 93 96 93 96 98 98 98 95 98 93 95 84 70 93 86 94 86 82 65 91;22 20 14
+Leon Draisaitl;C;EDM;96;91 90 92 94 87 89 95 90 95 94 96 96 94 98 89 90 84 84 96 86 85 83 80 70 88;3 20 14
+Cale Makar;D;COL;95;94 94 94 89 91 92 89 94 93 95 94 96 92 96 93 94 88 55 91 83 91 88 80 65 90;9 20 4
+Zach Werenski;D;CBJ;95;91 92 94 90 90 93 91 93 95 95 93 95 92 96 94 92 89 55 90 85 87 89 82 75 90;22 4 14
+David Pastrnak;AD;BOS;95;90 89 92 92 86 93 94 94 95 96 95 94 93 97 88 90 81 64 87 83 83 82 83 65 90;5 24 20
+Sidney Crosby;C;PIT;95;87 87 86 96 90 90 93 89 91 93 97 94 97 97 95 95 82 88 93 85 88 85 85 75 90;3 7 2
+Quinn Hughes;D;MIN;95;93 93 97 90 89 89 87 91 93 96 97 97 93 97 93 93 86 55 89 83 88 87 80 65 90;9 18 4
+Macklin Celebrini;C;SJS;95;90 89 92 85 86 92 94 93 93 93 96 95 91 97 93 90 82 78 87 83 90 85 82 75 89;9 20 14
+Aleksander Barkov;C;FLA;95;86 87 89 94 90 87 89 87 92 93 94 94 94 96 97 95 85 84 92 86 93 90 85 75 85;5 3 21
+Mikko Rantanen;AD;DAL;94;91 90 90 93 87 91 91 90 93 93 95 93 91 96 88 90 81 71 92 85 83 84 83 80 88;24 20 14
+Kirill Kaprizov;AG;MIN;94;90 89 92 92 87 90 92 90 94 95 96 93 92 96 87 89 86 64 91 84 83 84 82 68 88;5 9 20
+Jack Eichel;C;VGK;94;92 92 89 91 86 91 92 93 93 92 94 92 87 96 88 90 87 78 89 81 84 84 79 75 88;9 14 2
+Andrei Vasilevskiy;G;TBL;94;96 95 92 96 90 91 90 90 94 84 95 87 88 95 94 90 90 95 95;17
+Jack Hughes;C;NJD;94;92 92 93 83 79 87 92 88 94 93 96 95 88 97 89 90 88 73 86 81 87 83 79 65 85;5 9 14
+Rasmus Dahlin;D;BUF;93;90 90 93 94 89 93 93 91 93 94 94 94 92 95 92 92 80 55 91 86 86 89 82 70 89;9 4 14
+Mitch Marner;AD;VGK;93;88 87 90 85 86 87 90 87 90 94 96 94 93 96 93 90 87 69 85 81 90 86 80 65 90;9 4 14
+Nick Suzuki;C;MTL;93;90 91 87 90 87 89 91 90 89 92 94 93 88 95 93 88 87 81 90 83 88 88 81 65 90;25 21 14
+Miro Heiskanen;D;DAL;93;91 90 89 89 89 86 88 86 89 92 89 91 88 92 95 89 86 55 88 82 89 88 79 65 87;9 21 4
+William Nylander;AD;TOR;93;91 90 89 87 88 91 91 93 91 92 95 92 87 96 86 88 86 70 86 82 82 82 80 65 87;6 9 20
+Ilya Sorokin;G;NYI;93;88 96 96 96 95 89 90 88 92 90 91 82 80 92 94 95 94 93 93;0
+Mark Scheifele;C;WPG;93;91 90 90 92 82 88 94 87 90 93 93 94 91 95 89 88 83 79 92 86 86 85 82 70 90;6 25 20
+Jason Robertson;AG;DAL;92;88 87 89 90 85 91 91 92 93 91 93 91 93 95 87 88 86 66 88 83 81 83 81 75 90;7 22 20
+Auston Matthews;C;TOR;92;89 88 89 87 87 90 92 93 93 91 89 93 88 93 90 90 85 82 90 82 90 85 80 65 85;22 21 20
+Connor Hellebuyck;G;WPG;92;90 94 89 94 96 90 90 90 93 90 91 84 90 88 86 89 87 95 95;8
+Kyle Connor;AG;WPG;92;92 91 89 84 82 92 94 92 93 92 93 92 87 94 86 89 88 63 86 82 81 82 80 70 90;24 20 10
+Martin Necas;C;COL;92;92 93 88 84 86 92 94 90 93 93 94 92 87 95 86 87 84 68 86 82 80 82 80 70 89;9 14 10
+Evan Bouchard;D;EDM;91;88 88 91 84 85 95 94 92 89 93 94 93 90 94 88 92 85 55 85 82 83 84 80 70 90;24 19 4
+Sebastian Aho;C;CAR;91;90 89 88 87 85 89 91 89 92 91 95 92 94 95 89 95 82 81 87 83 87 85 80 65 89;7 25 21
+Tim Stützle;C;OTT;91;93 93 91 89 82 91 90 90 90 94 92 94 88 92 85 87 83 75 87 83 81 83 82 65 90;5 9 14
+Sam Reinhart;AD;FLA;91;87 86 88 89 88 88 92 90 93 91 92 90 90 94 88 90 89 72 90 84 80 86 81 65 88;7 25 14
+Igor Shesterkin;G;NYR;91;93 94 95 94 88 87 91 87 91 85 92 86 87 92 94 92 94 91 91;23
+Matthew Boldy;AG;MIN;91;90 89 91 93 87 92 92 92 92 93 93 94 90 95 89 89 83 70 89 85 85 86 81 80 90;7 22 20
+Matthew Schaefer;D;NYI;91;94 93 92 94 82 89 91 93 92 94 92 94 89 95 91 85 84 55 88 82 87 87 79 70 91;9 22 4
+Clayton Keller;AD;UTA;91;90 89 88 85 87 90 90 88 93 91 94 91 87 94 84 89 82 67 86 81 80 81 79 65 89;5 9 14
+Jaccob Slavin;D;CAR;91;83 84 82 86 87 87 86 85 85 82 85 83 81 85 95 82 91 56 89 85 92 89 80 75 83;21 13 11
+Roman Josi;D;NSH;91;92 91 92 92 88 91 93 88 92 93 90 93 90 95 91 91 84 55 91 85 85 89 85 70 86;9 4 14
+Victor Hedman;D;TBL;91;86 86 84 90 82 91 87 89 85 88 93 88 88 92 91 95 85 56 93 86 89 89 82 70 80;21 13
+Artemi Panarin;AG;LAK;91;90 89 89 88 83 90 91 93 92 93 94 92 87 94 84 89 87 64 86 81 80 81 79 65 90;22 20 14
+Matthew Tkachuk;AG;FLA;90;85 85 85 91 86 86 88 86 89 86 93 89 89 95 88 95 81 65 93 89 85 86 81 84 78;7 1 16
+Cole Caufield;AD;MTL;90;88 87 87 84 87 91 95 91 95 89 90 88 86 94 85 85 88 66 86 83 81 82 81 60 90;24 22 20
+Connor Bedard;C;CHI;90;93 92 89 86 84 89 91 93 91 92 93 92 87 93 84 88 81 74 87 82 81 82 80 65 88;5 20 14
+Wyatt Johnston;C;DAL;90;89 90 89 86 87 86 89 86 89 90 91 91 88 93 88 89 86 77 88 83 84 86 82 68 91;7 25 20
+Brandon Hagel;AG;TBL;90;92 91 89 92 84 88 90 90 91 91 92 92 88 90 85 89 81 67 89 82 82 85 81 65 89;25 11 10
+Josh Morrissey;D;WPG;90;90 89 89 88 87 89 92 87 89 92 92 92 88 93 88 91 85 55 86 82 85 84 80 75 90;9 4 13
+Logan Thompson;G;WSH;90;92 93 93 93 88 86 91 86 89 88 86 84 81 89 93 91 92 92 92;0
+Lane Hutson;D;MTL;90;93 93 91 93 82 82 86 83 88 93 92 94 89 94 87 92 83 55 87 82 87 86 79 65 90;9 4 14
+Jake Guentzel;AG;TBL;90;88 88 85 84 86 87 89 87 93 87 92 88 87 95 88 89 85 73 87 83 82 85 82 65 91;22 20
+Mark Stone;AD;VGK;90;84 84 83 90 88 88 91 84 87 87 93 90 89 93 91 92 89 65 93 86 88 89 81 75 85;1 25 21
+Jeremy Swayman;G;BOS;89;92 91 86 91 91 88 88 91 89 92 85 83 82 90 91 90 88 92 92;17
+Adam Fox;D;NYR;89;87 86 89 87 89 83 85 84 90 92 93 92 90 94 88 92 85 56 88 83 86 85 81 70 85;4 14
+Charlie McAvoy;D;BOS;89;90 89 88 87 89 85 90 86 88 90 91 90 87 92 90 90 80 55 90 84 84 88 81 75 85;13 12 11
+Lucas Raymond;AD;DET;89;89 88 89 87 88 89 88 91 87 92 92 91 88 90 85 88 87 64 87 82 81 82 80 75 89;22 20 14
+Jesper Bratt;AG;NJD;89;92 91 87 85 84 87 89 88 89 92 93 91 87 92 83 88 89 64 86 82 79 82 81 65 89;5 9 14
+Tage Thompson;C;BUF;89;90 91 90 89 88 95 93 94 92 93 91 93 88 93 86 88 84 76 89 85 81 83 81 75 88;5 6 24
+Seth Jarvis;AD;CAR;89;90 90 88 87 86 90 91 90 90 88 90 89 87 92 85 87 87 70 89 84 86 83 82 65 87;7 14
+Moritz Seider;D;DET;89;88 87 86 83 89 91 89 92 92 89 89 89 87 89 91 86 82 55 89 85 84 92 82 75 91;12 2 11
+Jake Sanderson;D;OTT;89;92 94 90 92 90 92 88 93 90 92 92 93 89 89 90 89 90 55 87 82 85 88 80 70 88;22 21 4
+Filip Forsberg;AG;NSH;89;87 87 88 87 89 93 90 94 92 89 90 90 88 90 85 88 82 66 90 82 88 82 82 70 89;5 22 20
+Adrian Kempe;AD;LAK;89;91 91 86 83 88 93 93 94 91 89 90 89 85 91 86 85 81 68 86 84 80 83 81 75 89;21 20 10
+Dylan Larkin;C;DET;89;90 89 88 85 88 89 88 90 90 90 90 91 87 92 90 88 81 84 88 81 84 83 80 70 88;1 27 10
+Jakob Chychrun;D;WSH;89;92 91 91 91 83 93 90 94 92 91 90 92 89 93 88 92 80 55 88 83 86 86 80 80 88;25 19 10
+Noah Dobson;D;MTL;89;88 88 89 90 84 87 90 88 89 89 90 91 87 89 91 89 82 54 88 82 87 93 79 75 87;9 14 11
+Alex DeBrincat;AD;DET;89;90 89 88 83 85 90 92 91 92 89 88 90 87 92 85 89 87 67 87 83 86 82 81 67 89;9 24 20
+Brady Tkachuk;AG;FLA;89;87 86 86 92 88 91 87 91 92 88 90 88 86 92 83 88 80 74 93 89 79 81 85 88 83;1 12 2
+Nikolaj Ehlers;AG;CAR;89;91 90 88 83 84 92 90 92 89 91 90 90 88 91 87 90 87 66 85 81 84 82 80 63 85;5 20 10
+Kirill Marchenko;AD;CBJ;89;91 91 90 86 87 91 91 92 91 91 86 91 87 90 85 88 84 65 88 83 86 83 80 70 88;24 20 2
+Dylan Guenther;AG;UTA;89;91 91 87 83 85 92 94 93 91 87 88 88 86 92 86 87 84 68 87 83 83 84 81 60 86;24 20
+Brad Marchand;AG;FLA;89;89 89 88 88 86 86 86 89 92 90 94 90 88 93 87 95 80 64 90 85 85 84 81 80 83;25 21 16
+Alex Ovechkin;AG;WSH;89;83 84 84 84 83 93 94 93 93 83 87 84 83 96 83 87 84 64 96 85 80 82 82 80 88;24 22 2
+Nick Schmaltz;C;UTA;89;90 89 89 84 87 85 90 84 89 89 92 91 88 92 89 88 86 75 86 82 88 84 80 70 90;7 14
+Evgeni Malkin;C;PIT;89;87 86 88 87 81 88 89 85 86 91 92 90 88 93 87 87 80 73 88 82 88 82 81 70 83;3 6 2
+Nico Hischier;C;NJD;88;87 86 88 86 90 87 90 84 89 88 90 89 88 92 90 88 85 84 88 83 83 87 81 65 89;25 27 14
+Brayden Point;C;TBL;88;91 91 88 90 85 87 87 87 88 92 90 91 87 91 86 87 88 76 87 82 80 82 81 65 85;6 25 10
+Brock Faber;D;MIN;88;89 89 88 92 90 88 89 91 92 89 90 90 86 90 89 88 87 55 89 83 82 88 80 76 90;9 21 14
+Gustav Forsling;D;FLA;88;85 86 84 85 86 92 87 88 85 82 83 84 81 88 91 83 84 55 90 84 89 88 81 65 89;19 4 10
+Robert Thomas;C;STL;88;87 89 87 89 88 86 89 86 89 91 93 91 87 91 89 89 84 83 88 82 86 86 80 70 86;5 27 14
+Logan Cooley;C;UTA;88;93 94 86 87 81 87 91 84 87 88 90 88 85 92 86 87 81 76 88 83 82 82 81 65 83;5 14 10
+Leo Carlsson;C;ANA;88;90 90 88 83 84 86 88 88 89 90 89 91 87 91 87 87 84 77 86 82 85 83 80 65 85;22 14
+Shea Theodore;D;VGK;88;88 88 88 83 86 89 86 90 89 89 92 90 87 91 90 87 85 55 85 81 87 86 79 70 84;9 22 4
+Ivan Demidov;AD;MTL;88;89 88 88 90 80 88 89 89 85 90 91 90 86 91 85 87 81 62 88 82 83 82 81 70 85;5 20 14
+Thomas Harley;D;DAL;88;91 90 89 89 82 86 84 89 87 91 90 91 88 91 89 89 86 55 88 83 85 88 80 75 86;9 4 14
+Mikhail Sergachev;D;UTA;88;88 91 86 83 90 91 89 91 90 88 90 89 86 92 89 90 83 55 89 83 83 88 80 78 88;18 12 11
+Bo Horvat;C;NYI;88;89 91 86 84 85 91 93 92 91 89 90 87 85 93 87 88 84 84 87 83 85 85 81 75 89;1 27
+Mathew Barzal;C;NYI;88;90 89 87 89 81 86 88 85 87 93 91 91 86 90 84 88 83 72 90 82 86 82 80 65 86;9 14
+Andrei Svechnikov;AD;CAR;88;87 88 88 89 87 90 91 91 89 89 91 89 86 91 84 87 80 65 92 85 80 81 83 75 85;6 20
+Matthew Knies;AG;TOR;88;86 86 88 92 85 86 89 86 89 88 88 89 88 88 85 85 84 65 93 89 84 85 85 80 89;25 2
+Tom Wilson;AD;WSH;88;87 88 85 90 88 90 88 88 87 85 85 85 87 85 81 85 81 67 96 92 86 86 90 88 89;16 12
+Travis Sanheim;D;PHI;88;90 91 89 86 88 88 87 87 86 86 86 88 84 85 91 85 86 55 86 82 86 89 80 75 90;9 18 4
+Vincent Trocheck;C;UTA;88;85 86 86 83 87 85 88 82 85 88 90 89 87 91 91 86 81 83 89 86 88 88 83 65 88;25 27
+Jake Oettinger;G;DAL;88;88 92 88 92 90 87 85 88 89 88 90 84 90 88 87 87 90 93 93;15
+Jackson LaCombe;D;ANA;88;90 90 89 90 88 88 89 86 86 90 91 90 88 89 88 85 87 55 88 83 90 87 80 67 89;9 4 13
+Noah Hanifin;D;VGK;88;88 89 86 83 84 87 87 88 87 87 90 88 85 90 90 88 88 55 86 83 87 87 80 75 86;9 4
+K'Andre Miller;D;CAR;88;88 89 85 83 85 87 86 89 86 85 86 86 83 86 91 86 81 55 85 84 90 86 82 75 86;21 4 10
+John Tavares;C;TOR;88;88 87 89 91 88 86 89 85 89 91 89 90 88 91 88 87 83 85 92 85 83 83 83 70 88;7 27
+Michael Matheson;D;MTL;88;88 89 89 91 88 87 84 86 84 89 87 88 86 87 90 85 82 54 89 83 88 89 79 75 89;9 18
+Erik Karlsson;D;PIT;88;91 91 90 86 89 92 90 90 92 93 92 92 90 91 85 90 87 55 85 82 86 83 80 65 89;9 19 4
+Alex Tuch;AD;WSH;88;88 90 86 87 89 89 88 91 92 85 88 88 85 90 90 85 82 70 92 87 90 87 81 70 89;6 25 10
+Travis Konecny;AD;PHI;88;90 89 87 86 84 89 87 89 91 91 92 91 92 93 86 90 81 68 87 83 84 85 81 65 89;7 25 16
+Ryan Pulock;D;NYI;88;84 84 84 86 88 93 85 83 83 86 85 86 84 83 92 83 88 55 88 84 88 91 82 75 85;19 13
+Dylan Strome;C;WSH;87;86 85 85 82 85 85 88 85 88 89 92 90 87 92 85 89 82 84 87 81 84 83 80 70 88;27 4 14
+Jesper Wallstedt;G;MIN;87;92 88 92 88 83 91 90 88 89 91 89 87 86 93 87 87 90 85 85;15
+Gabe Vilardi;C;WPG;87;86 87 87 91 83 88 91 87 88 89 89 88 86 89 87 85 87 71 91 87 84 84 82 70 88;20 14
+Cutter Gauthier;AG;ANA;87;91 91 86 88 85 92 91 93 90 86 88 87 87 92 86 87 83 71 88 85 82 84 81 80 86;6 24 20
+Scott Wedgewood;G;COL;87;91 88 91 87 91 86 90 88 83 87 85 83 83 91 91 91 91 87 87;17
+Kevin Fiala;AG;LAK;87;88 87 85 88 84 91 90 91 88 92 90 91 87 91 85 88 81 66 87 82 81 81 80 65 84;20 10
+Roope Hintz;C;DAL;87;88 89 84 85 88 86 88 86 85 86 89 87 86 91 89 87 83 82 90 84 85 85 81 75 82;9 27 14
+Devon Toews;D;COL;87;87 87 85 82 89 86 87 87 87 86 89 87 84 89 90 85 84 55 86 82 88 86 80 70 86;9 4 13
+Troy Terry;AD;ANA;87;91 90 88 86 85 86 85 87 88 91 91 90 87 92 84 88 86 65 87 81 80 81 80 70 85;22 20 14
+Rasmus Andersson;D;VGK;87;89 89 87 87 91 91 92 89 91 86 88 87 85 90 89 89 81 55 88 83 82 89 80 75 90;25 21 18
+Lukas Dostal;G;ANA;87;87 90 85 90 93 92 88 88 88 89 86 84 83 83 85 85 85 92 92;8
+Dustin Wolf;G;CGY;87;85 89 91 90 90 90 85 90 89 87 88 87 89 92 87 88 87 89 90;8
+Joel Eriksson Ek;C;MIN;87;84 85 85 88 89 86 88 86 88 84 85 84 83 89 91 84 82 84 91 86 87 87 84 68 85;25 11
+Drake Batherson;AD;OTT;87;86 86 87 90 85 89 90 89 90 89 91 89 86 93 86 86 82 67 88 85 82 83 83 70 88;9 20 14
+Juraj Slafkovsky;AG;MTL;87;87 86 89 92 84 87 90 87 87 89 90 90 87 90 85 85 84 67 90 85 81 86 82 75 88;6 22 2
+Morgan Geekie;C;BOS;87;86 86 86 87 84 93 93 90 90 89 88 89 88 90 87 85 85 72 89 85 85 85 83 70 87;22 20
+Will Smith;C;SJS;87;87 87 86 84 86 88 90 89 89 86 92 85 87 92 85 88 83 69 85 80 82 81 80 65 85;5 4 14
+Darren Raddysh;D;TOR;87;89 88 88 86 84 93 93 90 89 91 92 90 87 93 87 91 84 56 86 84 82 85 82 75 86;24 19
+Brett Pesce;D;NJD;87;83 82 84 90 86 87 83 86 84 84 85 85 84 82 93 85 88 56 90 87 90 90 81 65 82;13 11
+Mika Zibanejad;C;NYR;87;86 86 84 83 89 89 89 88 89 87 88 88 86 91 90 85 88 79 86 82 88 84 80 75 90;20 14
+Brandt Clarke;D;LAK;87;88 86 87 88 84 83 87 84 89 90 92 91 87 90 87 90 80 55 86 82 84 93 80 67 83;4 11 10
+Bowen Byram;D;CHI;87;92 91 89 90 85 85 89 85 87 89 87 91 85 90 88 85 82 55 89 83 84 87 80 70 88;9 4 10
+Spencer Knight;G;CHI;87;85 92 87 92 89 87 87 88 91 84 88 86 87 94 84 86 89 90 90;
+Pavel Dorofeyev;AG;NYR;87;86 85 87 87 84 92 93 91 91 87 85 89 86 91 84 85 84 64 88 82 80 81 80 65 86;24 22 20
+Thomas Chabot;D;OTT;87;90 89 87 84 80 89 89 87 88 90 89 90 86 91 89 86 85 55 87 83 81 89 80 70 83;9 18 4
+Filip Hronek;D;VAN;87;87 86 84 83 87 89 89 87 87 87 90 87 84 89 90 88 84 55 86 84 83 85 82 70 89;9 19
+Adam Pelech;D;NYI;87;83 83 85 90 87 84 82 84 84 85 82 86 85 82 94 83 81 55 92 86 91 90 82 78 85;21 13 11
+Trevor Zegras;C;PHI;87;88 87 85 85 80 86 88 87 89 90 91 89 85 91 86 87 81 72 88 83 81 82 81 65 85;5 14
+Esa Lindell;D;DAL;87;83 83 84 85 85 82 85 82 84 82 85 85 82 85 95 85 89 55 89 83 90 92 80 70 89;21 13
+John Carlson;D;TBL;87;87 86 88 86 87 92 92 85 89 90 91 90 87 91 87 90 84 55 86 82 90 86 80 75 87;19 4
+Shayne Gostisbehere;D;CAR;87;86 85 88 82 85 91 90 90 88 91 91 89 88 92 85 90 82 55 84 83 85 83 80 70 81;9 24 4
+Zach Hyman;AG;EDM;87;87 88 86 90 83 86 89 86 89 86 86 87 86 89 85 85 82 64 94 88 82 83 85 70 86;7 25
+Mikael Granlund;C;ANA;87;86 85 86 86 86 84 85 86 88 89 90 90 86 90 87 87 84 78 88 83 84 85 81 65 85;
+Matt Duchene;C;DAL;87;87 86 86 90 81 84 85 83 87 90 91 89 86 91 84 87 88 77 88 83 80 81 81 75 83;7 14
+Ryan O'Reilly;C;NSH;87;83 84 85 85 90 84 90 81 87 85 90 87 86 89 91 87 87 83 89 83 93 88 81 75 90;27 14
+Adam Fantilli;C;CBJ;86;90 90 88 84 82 89 90 90 90 89 89 90 86 90 87 87 84 79 88 85 83 84 81 70 88;25 20 2
+Sam Bennett;C;FLA;86;89 88 88 84 85 86 87 88 88 89 88 89 86 91 87 87 79 79 89 85 81 84 83 70 86;7 16 11
+Matvei Michkov;AD;PHI;86;86 85 86 88 81 84 86 85 90 90 90 88 85 90 83 84 80 65 87 82 80 80 80 65 85;22 20 14
+MacKenzie Weegar;D;UTA;86;88 87 87 83 89 87 89 87 87 89 91 91 87 86 87 88 81 55 88 87 85 91 84 70 89;21 18 11
+Elias Pettersson;C;VAN;86;85 84 84 82 86 89 86 88 86 90 90 90 86 87 87 85 86 81 86 82 86 87 80 65 86;5 14
+Luke Hughes;D;NJD;86;91 93 90 92 86 86 86 89 88 92 88 89 88 88 86 85 84 55 88 82 87 83 79 70 85;9 4 10
+Beckett Sennecke;AG;ANA;86;88 89 89 88 85 91 88 89 89 88 90 91 87 87 84 86 80 64 89 86 82 81 82 75 88;6 9 14
+Jordan Kyrou;AD;WSH;86;91 90 88 84 81 89 88 91 89 91 88 90 86 87 84 85 87 65 86 82 81 81 80 65 85;14 10
+Vince Dunn;D;SEA;86;88 87 88 88 87 90 91 90 88 90 93 90 87 92 87 90 81 55 86 82 83 85 80 70 86;4 14
+Juuse Saros;G;NSH;86;88 91 86 93 84 86 89 85 88 83 84 87 88 82 91 88 89 94 94;23
+J.T. Miller;C;NYR;86;84 85 85 89 89 90 88 87 84 89 92 89 88 89 86 86 82 82 91 87 81 84 83 75 87;25 16
+Brandon Bussi;G;CAR;86;89 88 93 88 84 85 88 87 88 83 90 82 84 93 88 89 95 87 87;0
+Jakub Dobeš;G;MTL;86;85 89 91 87 88 91 87 87 87 93 85 84 83 89 85 86 94 86 86;17
+William Eklund;AG;OTT;86;87 86 86 90 83 86 88 86 87 89 90 90 85 89 83 84 84 67 89 83 80 84 81 67 88;9 14
+Dylan Cozens;C;OTT;86;89 89 87 88 87 88 90 88 89 88 87 88 85 90 86 84 80 78 92 89 81 84 84 70 86;22 20
+JJ Peterka;AD;BOS;86;89 88 86 84 82 88 91 90 90 86 89 88 85 88 85 85 83 65 85 81 83 81 79 75 86;22 20
+Ivan Barbashev;AG;VGK;86;85 86 85 87 82 87 88 86 88 87 89 88 86 92 86 85 86 67 92 86 82 85 82 65 85;20 2
+Seth Jones;D;FLA;86;87 86 85 88 86 89 89 88 87 88 88 88 86 90 88 87 86 55 87 83 84 85 81 75 83;21 19 4
+Josh Doan;AD;BUF;86;86 87 87 84 86 87 86 88 86 86 87 87 87 90 88 83 87 68 89 86 88 84 84 65 83;7 16
+Aliaksei Protas;C;WSH;86;88 88 86 88 82 88 88 89 89 86 87 88 85 88 89 85 86 68 89 84 86 86 80 83 86;6 20 14
+Filip Gustavsson;G;MIN;86;86 90 89 91 86 90 86 85 89 91 84 86 84 86 86 84 84 91 91;
+Mackenzie Blackwood;G;COL;86;91 91 89 89 85 88 83 87 89 87 83 80 80 86 88 87 93 87 87;15
+Owen Power;D;BUF;86;89 88 88 91 82 84 86 85 90 90 89 90 86 90 88 86 88 55 86 82 84 85 79 75 88;9 4
+Brandon Montour;D;SEA;86;90 91 86 85 81 92 92 90 91 88 89 87 86 91 87 89 81 55 86 84 82 84 81 73 85;9 19
+Jet Greaves;G;CBJ;86;91 88 88 88 88 85 86 90 89 86 83 83 83 83 91 90 90 87 86;8
+Rickard Rakell;AD;PIT;86;85 86 86 86 88 87 90 85 89 85 88 88 88 90 87 85 88 69 89 86 85 86 84 65 85;7 20
+Pierre-Luc Dubois;C;WSH;86;85 86 85 89 83 86 85 86 85 85 89 88 86 88 87 85 81 81 92 88 85 86 82 75 81;21 14
+Anton Lundell;C;FLA;86;85 84 84 87 86 84 86 85 87 86 87 87 85 88 90 86 82 82 90 85 85 86 82 70 85;21 14
+Colton Parayko;D;STL;86;89 90 86 90 87 88 86 85 85 86 85 89 85 85 88 84 88 55 92 84 84 91 81 80 87;13 11
+Jared McCann;C;SEA;86;86 86 86 84 85 91 90 91 89 86 89 88 87 90 87 85 87 68 90 84 84 85 80 68 82;22
+Vladislav Gavrikov;D;NYR;86;84 84 85 83 88 88 89 87 86 82 85 84 82 86 93 86 83 55 86 83 89 88 80 80 89;
+Aaron Ekblad;D;FLA;86;84 84 85 88 88 84 87 83 84 84 85 85 83 86 89 83 81 56 92 87 85 88 83 75 85;14 11
+Brady Skjei;D;NSH;86;87 88 85 84 88 85 87 84 84 83 85 86 82 87 89 86 82 55 85 83 85 85 81 80 89;13 10
+Bryan Rust;AD;PIT;86;87 87 85 86 90 88 89 86 90 85 88 87 86 91 87 84 85 65 87 84 83 88 81 70 87;25 16
+Nazem Kadri;C;COL;86;89 88 87 84 87 85 88 86 90 91 90 90 87 91 87 87 82 78 87 82 80 83 80 75 88;5 25
+Ryan Nugent-Hopkins;C;EDM;86;85 85 84 83 85 85 87 84 88 88 90 87 85 91 87 85 86 74 86 82 84 83 80 67 88;21 14
+Damon Severson;D;CBJ;86;84 84 87 85 84 88 86 85 83 84 87 86 84 88 88 86 81 55 87 83 88 86 81 75 84;
+Dougie Hamilton;D;NJD;86;86 85 85 83 85 91 91 91 91 87 89 86 86 92 86 88 80 55 86 84 82 83 82 67 84;19 4
+Mattias Ekholm;D;EDM;86;86 85 87 83 84 88 88 84 85 87 87 87 85 87 92 88 83 55 88 83 87 88 80 80 86;21 13 11
+Jonas Brodin;D;MIN;86;83 83 84 89 85 84 85 84 85 84 85 86 84 86 90 82 86 56 88 83 86 90 81 70 83;21 13
+Justin Faulk;D;DET;86;89 89 88 84 82 89 87 87 87 90 88 90 86 89 87 86 82 55 88 84 82 87 82 75 87;4
+Martin Fehervary;D;WSH;86;86 86 84 86 85 84 85 83 84 83 84 85 82 85 93 83 86 56 89 85 85 92 83 80 85;21 13
+Jake McCabe;D;TOR;86;85 85 84 87 87 86 86 83 83 85 86 87 84 85 91 85 82 56 89 87 86 93 84 65 88;11
+Mattias Samuelsson;D;BUF;86;84 85 84 89 87 86 84 87 86 82 82 84 80 83 91 82 85 55 92 87 86 91 83 80 85;
+Jonas Siegenthaler;D;NJD;86;82 82 82 86 84 82 82 82 82 82 82 83 81 83 93 82 83 56 91 86 88 90 83 80 84;
+Josh Manson;D;COL;86;86 86 85 87 84 86 85 85 85 85 86 86 84 85 88 86 79 55 93 90 85 87 86 84 82;12 11
+Dylan DeMelo;D;WPG;86;83 83 83 84 88 83 84 82 84 84 86 84 82 85 89 83 83 56 90 86 87 88 83 77 89;11
+Patrick Kane;AD;CHI;86;89 88 85 83 84 83 87 85 89 89 92 88 84 90 83 87 86 65 85 81 79 81 79 65 84;5 3 14
+Steven Stamkos;C;NSH;86;85 86 84 84 88 93 94 90 90 86 88 87 84 90 83 87 81 76 87 83 80 82 81 77 88;24 20
+Oliver Ekman-Larsson;D;TOR;86;85 84 85 83 86 88 86 90 86 86 89 86 83 89 88 86 80 55 87 84 85 84 81 65 85;
+Mats Zuccarello;AD;LAK;86;83 82 82 82 85 86 87 87 88 86 92 86 84 91 85 88 83 69 86 81 81 81 79 65 84;4 14
+Anthony Cirelli;C;TBL;85;85 86 83 82 87 83 86 82 87 84 86 85 83 88 91 85 83 81 87 83 87 88 81 70 86;25 21
+Brock Nelson;C;COL;85;88 89 86 83 88 90 94 88 88 88 88 88 87 90 89 87 84 82 87 84 87 86 81 80 89;6 7
+Carter Verhaeghe;AG;FLA;85;88 89 86 83 85 85 88 87 90 88 89 88 86 91 84 87 83 69 88 85 80 81 82 75 87;9 22
+Quinton Byfield;C;LAK;85;91 91 88 87 87 89 87 90 87 90 87 88 87 86 85 86 81 77 89 85 87 84 81 70 89;5 6
+Timo Meier;AD;NJD;85;88 87 87 88 85 90 87 91 87 87 86 88 86 86 84 86 84 69 90 86 82 85 81 75 87;6 2
+Dylan Holloway;AG;STL;85;89 88 86 89 80 88 87 91 89 89 88 89 85 89 84 86 86 71 89 87 80 85 85 80 83;21 16
+Jimmy Snuggerud;AD;STL;85;85 85 85 86 81 88 86 89 87 87 86 86 87 89 86 83 85 65 89 85 84 82 81 82 84;22 20
+Logan Stankoven;C;CAR;85;88 87 85 84 80 84 87 85 87 87 88 87 85 89 86 86 85 76 88 83 83 82 82 70 83;25 20 16
+Linus Ullmark;G;OTT;85;87 88 91 90 87 85 87 85 88 84 86 83 82 85 91 86 90 89 89;15
+Tomas Hertl;C;VGK;85;83 83 88 88 86 85 89 84 86 88 88 90 87 90 89 86 82 83 91 85 83 86 84 65 85;6 27 20
+Morgan Rielly;D;TOR;85;89 88 85 83 86 82 83 85 91 87 91 88 85 90 88 90 86 55 86 82 84 87 80 70 87;4
+Brock Boeser;AD;VAN;85;83 83 82 85 85 92 88 91 89 85 87 85 83 89 85 82 89 69 86 82 82 81 80 67 88;24 20
+Jake Walman;D;EDM;85;87 87 87 86 82 90 89 86 87 87 87 88 86 85 87 86 84 55 90 83 86 89 80 70 81;19 4 10
+Karel Vejmelka;G;UTA;85;87 87 85 87 87 88 85 86 87 91 88 85 86 91 91 88 85 94 94;8
+Darnell Nurse;D;SJS;85;89 90 85 84 83 90 89 90 88 84 86 85 82 87 86 88 80 55 87 88 85 90 82 80 88;12 11
+Matt Coronato;AD;CGY;85;88 87 85 83 87 87 85 90 89 87 88 88 84 90 83 85 82 70 86 82 79 80 80 65 85;25 14
+Pavel Zacha;C;BOS;85;86 86 86 85 88 87 91 85 86 87 88 88 87 89 89 85 84 79 88 85 85 83 82 75 87;6 7 21
+Owen Tippett;AD;PHI;85;92 94 87 85 83 90 87 92 88 86 86 88 85 86 81 85 84 65 87 82 80 83 80 70 85;5 10
+Rasmus Sandin;D;WSH;85;89 88 86 86 81 83 84 86 84 88 88 90 86 88 87 87 87 55 88 84 85 88 81 70 84;9 4
+Joel Hofer;G;STL;85;89 87 89 87 84 87 87 87 87 87 89 90 90 90 87 85 89 86 85;
+Morgan Frost;C;CGY;85;88 87 86 84 85 82 86 82 86 89 88 90 87 88 87 85 82 81 88 83 86 83 81 67 84;9 20
+Alexis Lafrenière;AG;NYR;85;87 86 87 87 82 84 87 86 88 88 88 90 87 87 84 83 84 67 88 83 81 82 81 70 88;5 14
+Mason McTavish;C;STL;85;86 85 86 85 83 89 89 89 87 88 89 88 85 89 85 86 80 78 89 86 82 83 82 80 84;25 20
+Marco Rossi;C;VAN;85;86 86 85 84 87 86 86 86 86 88 90 88 86 89 87 85 87 79 87 85 85 86 82 72 84;25 14
+Ryan McLeod;C;BUF;85;88 88 85 84 86 82 84 82 86 89 90 89 86 88 87 84 87 81 87 82 90 84 80 70 87;10
+Luke Evangelista;AD;NSH;85;86 85 85 89 82 82 83 83 88 88 91 89 87 89 87 84 82 62 88 83 85 82 81 65 84;
+Dan Vladar;G;PHI;85;87 89 86 89 91 86 88 85 88 88 86 83 83 83 87 86 91 87 87;
+Jacob Middleton;D;CGY;85;84 84 84 87 85 82 84 82 83 83 83 84 81 85 91 82 85 56 92 86 84 90 80 84 84;21 11
+Philip Broberg;D;STL;85;89 90 87 86 84 84 84 84 85 86 85 87 84 88 88 86 89 55 87 83 84 85 80 70 86;9 4
+Denton Mateychuk;D;CBJ;85;88 88 85 87 81 83 83 84 85 86 85 87 84 87 91 85 86 55 87 83 86 86 80 70 82;
+Alexander Nikishin;D;CAR;85;87 88 87 84 86 93 91 92 87 86 85 87 85 84 87 85 83 55 88 86 86 86 83 78 84;
+Niko Mikkola;D;FLA;85;84 84 84 88 86 82 83 82 85 83 82 84 82 84 90 82 81 56 91 87 87 86 84 70 85;13 12
+Sam Malinski;D;COL;85;89 90 86 88 80 90 85 92 89 88 89 88 85 90 86 88 85 55 87 84 82 85 82 70 82;9
+Mason Marchment;AG;SJS;85;85 84 85 88 81 86 88 87 87 87 89 87 85 89 87 81 80 67 89 86 83 83 82 83 83;16 12
+Alexander Wennberg;C;SJS;85;84 83 85 90 86 83 83 81 83 89 89 91 85 88 89 83 87 79 88 82 87 89 79 65 88;14
+Marcus Pettersson;D;NYR;85;83 83 83 86 87 84 85 82 83 84 84 85 82 85 92 83 82 56 87 84 87 90 82 70 89;4 13
+Brandon Carlo;D;STL;85;82 82 81 86 85 83 83 82 82 81 82 82 80 83 92 81 81 56 90 86 87 90 83 80 83;11
+John Marino;D;UTA;85;85 86 85 86 84 84 82 82 83 87 88 88 85 87 88 84 89 56 87 83 84 85 81 75 84;9 4
+Anthony Mantha;AD;NJD;85;86 86 85 85 79 90 86 88 88 84 86 87 85 89 85 82 82 66 87 83 80 82 81 70 82;6 22
+Adam Larsson;D;SEA;85;84 84 83 87 88 87 89 84 85 82 85 84 80 85 91 84 82 55 87 86 84 90 83 70 88;11
+Ivan Provorov;D;CBJ;85;88 87 87 87 86 86 85 87 88 87 87 90 85 88 88 86 86 55 87 82 82 87 80 75 90;
+Sergei Bobrovsky;G;TOR;85;87 89 87 90 85 87 83 87 87 85 91 86 87 87 85 84 85 92 92;17
+John Gibson;G;DET;85;89 89 87 90 85 88 84 87 87 90 85 82 82 84 86 87 87 89 90;
+Nicolas Hague;D;NSH;85;82 82 83 88 81 86 85 85 83 83 83 85 82 83 90 82 82 56 91 86 88 86 83 75 82;
+Nikita Zadorov;D;BOS;85;89 91 82 89 86 91 80 90 80 85 83 86 82 81 88 82 79 55 94 89 84 87 86 88 86;12
+Jamie Oleksiak;D;VAN;85;85 85 83 86 82 86 85 85 85 82 84 85 81 85 88 84 83 56 95 88 86 90 85 85 84;
+Mason Lohrei;D;BOS;85;87 86 87 87 80 83 85 85 85 88 88 89 86 87 87 87 84 55 91 84 84 87 80 80 82;
+Samuel Girard;D;PIT;85;88 87 84 87 81 83 83 82 83 86 87 86 83 89 87 87 85 56 88 84 84 85 81 65 83;9
+Hampus Lindholm;D;BOS;85;86 85 84 83 85 84 84 85 85 87 86 87 86 88 89 84 81 55 87 82 84 85 80 70 82;9 21
+Brayden McNabb;D;VGK;85;82 82 83 83 86 86 85 85 86 83 84 83 81 85 91 85 84 56 87 88 85 90 87 80 84;12
+J.J. Moser;D;TBL;85;86 85 85 86 84 83 85 83 86 86 86 87 84 88 88 86 83 56 87 85 85 86 83 80 86;
+Shane Pinto;C;OTT;85;88 87 86 87 85 88 88 87 87 85 84 87 84 86 88 81 82 78 90 84 86 87 81 77 85;21
+Brenden Dillon;D;NJD;85;83 83 82 88 84 86 85 84 84 84 84 83 82 82 88 81 81 56 93 91 84 88 88 86 85;
+Mikey Anderson;D;LAK;85;84 83 83 86 85 83 84 82 81 83 83 84 82 80 89 82 87 56 88 86 90 87 83 75 87;9 21
+Erik Cernak;D;TBL;85;82 82 82 84 88 83 85 83 82 83 82 83 81 83 90 82 80 56 91 89 85 89 86 75 82;13 11
+Gabriel Landeskog;AG;COL;85;84 83 86 89 87 86 87 84 85 88 85 87 85 87 85 83 80 74 91 88 83 83 85 80 82;6 7 1
+Artem Zub;D;OTT;85;83 83 82 84 88 85 84 84 85 82 83 84 81 84 90 82 81 56 87 85 85 88 83 80 86;11
+Taylor Hall;AG;CAR;85;87 87 86 86 82 84 85 84 87 88 89 88 85 89 85 85 81 68 89 84 82 82 82 70 83;10
+Kaiden Guhle;D;MTL;85;84 84 84 89 81 85 85 86 84 84 83 84 83 84 88 82 81 56 90 89 84 89 87 80 81;
+Dmitry Orlov;D;SJS;85;86 85 84 84 84 85 86 83 83 86 88 87 84 89 87 85 81 55 87 86 87 84 83 65 86;26 11
+Johnathan Kovacevic;D;NJD;85;82 82 82 85 82 85 83 83 82 82 82 83 81 84 89 81 81 56 91 89 88 86 86 75 81;
+Charlie Coyle;C;CBJ;85;84 84 85 88 90 83 85 82 86 85 86 88 85 86 88 81 86 80 91 87 85 86 82 80 88;25 2
+Christopher Tanev;D;TOR;85;82 82 81 87 86 86 82 85 82 84 85 84 84 80 91 85 89 56 90 86 86 92 84 75 83;13 11
+Jordan Eberle;AD;SEA;85;87 86 84 84 84 84 86 84 90 86 88 87 84 89 85 84 84 67 86 82 80 82 80 65 85;3 7
+Connor Murphy;D;EDM;85;82 82 82 85 83 84 85 83 84 82 82 83 81 83 90 81 81 56 90 88 87 91 85 77 84;11
+Drew Doughty;D;LAK;85;86 85 83 83 86 88 89 86 84 87 88 87 84 88 88 83 82 56 86 84 84 86 82 75 85;11
+Blake Coleman;C;MIN;85;86 85 85 86 88 84 88 83 87 83 83 86 84 86 88 81 80 68 93 88 85 87 83 75 85;6
+Kris Letang;D;PIT;85;87 86 86 87 82 85 87 83 84 88 91 88 86 90 87 88 81 55 88 85 83 86 82 75 86;9
+Claude Giroux;C;OTT;85;84 84 82 83 89 86 86 83 87 86 91 86 83 89 87 85 86 89 86 82 80 83 80 70 87;27
+Brent Burns;D;COL;85;84 84 85 86 88 91 88 92 90 85 87 85 84 86 87 88 83 55 86 81 87 85 79 80 86;9 4
+Jackson Blake;AD;CAR;84;86 86 88 87 80 82 85 83 88 89 88 89 86 91 85 87 80 64 88 81 82 82 80 65 85;5 25 14
+Matty Beniers;C;SEA;84;86 85 87 85 83 85 87 88 85 89 86 90 86 88 90 82 87 77 87 82 85 88 80 68 88;9 25 21
+Simon Edvinsson;D;DET;84;87 86 87 91 82 83 83 83 86 86 84 88 84 86 89 83 80 55 90 85 85 91 83 72 84;
+Frank Nazar;C;CHI;84;90 92 86 84 82 87 86 86 85 86 87 88 84 89 87 85 82 77 88 82 86 83 80 65 83;14 10
+Simon Nemec;D;CGY;84;87 86 86 84 80 85 88 86 85 86 85 86 83 88 87 84 83 56 88 83 88 87 81 70 82;21 4
+Jacob Trouba;D;SJS;84;82 82 83 84 89 88 88 86 86 82 84 84 82 82 89 82 83 55 88 89 84 89 84 70 88;12
+Jordan Staal;C;CAR;84;82 83 83 88 89 83 85 82 84 84 83 82 84 85 88 85 85 86 92 89 88 86 85 75 84;1 27 11
+Jacob Markstrom;G;FLA;84;86 88 88 88 84 87 82 87 87 85 87 88 90 87 89 84 84 88 88;
+Valeri Nichushkin;AD;CBJ;84;89 89 85 85 86 86 88 85 86 87 85 87 84 88 87 84 85 64 88 86 86 81 81 65 84;6 2
+Artturi Lehkonen;AG;COL;84;85 86 83 84 86 86 90 85 85 85 86 86 84 89 87 85 86 66 89 84 84 85 82 60 86;7 25
+Tyler Toffoli;AD;SJS;84;82 82 82 84 87 87 90 88 90 84 86 85 85 91 86 84 88 65 89 84 84 85 80 65 85;7 20
+Thatcher Demko;G;VAN;84;89 87 90 87 86 90 84 86 87 87 84 82 81 86 87 85 86 84 80;
+Conor Garland;AD;CBJ;84;86 85 87 89 84 85 86 84 86 89 88 90 85 86 85 83 83 66 89 83 85 83 80 75 85;25 16
+Pavel Buchnevich;AG;STL;84;85 84 83 84 86 85 89 83 86 85 89 86 83 89 86 86 85 71 87 82 84 84 80 65 88;7 9
+Josh Norris;C;BUF;84;85 85 85 85 87 86 85 86 84 87 89 87 87 89 87 84 82 81 90 85 81 86 82 70 80;13 10
+Elias Lindholm;C;BOS;84;82 82 82 83 90 86 86 86 86 85 87 85 84 88 88 85 83 85 87 84 84 87 83 65 86;25 27
+Darcy Kuemper;G;LAK;84;87 88 85 88 87 86 85 88 86 86 88 85 84 82 83 85 87 89 89;
+Brayden Schenn;C;NYI;84;85 85 85 84 85 86 87 85 86 88 87 87 84 88 86 84 81 80 88 87 83 84 84 84 87;1 16 12
+William Karlsson;C;VGK;84;84 84 82 83 81 83 82 85 84 86 84 84 83 87 89 82 84 82 90 84 88 87 83 65 79;27 21
+Dylan Samberg;D;WPG;84;83 83 83 89 82 85 84 86 85 85 84 87 84 84 89 84 87 56 88 84 89 89 81 80 84;21 11
+Alex Vlasic;D;CHI;84;87 87 85 86 87 84 85 84 82 85 85 88 84 82 89 82 89 55 88 83 90 88 80 75 88;
+Yaroslav Askarov;G;SJS;84;87 89 86 89 88 86 83 86 87 83 87 84 83 85 85 85 85 87 87;
+Zach Benson;AG;BUF;84;85 84 84 88 81 82 86 83 85 86 87 86 84 87 88 83 82 67 89 84 87 84 82 60 83;25 16
+Jack Quinn;AD;BUF;84;90 89 85 84 81 88 86 89 86 88 88 87 84 88 84 85 83 63 86 82 80 81 80 65 84;5 14
+Porter Martone;AD;PHI;84;88 89 86 86 85 89 84 89 86 87 86 85 86 88 85 85 84 72 90 84 80 82 84 75 85;14
+Radko Gudas;D;FLA;84;82 82 82 84 81 88 85 86 83 82 83 83 81 84 88 83 81 56 92 91 83 89 89 86 82;26 12
+Matt Roy;D;WSH;84;84 85 83 84 82 86 86 84 83 83 85 84 82 85 87 85 88 56 88 87 83 90 84 80 86;
+Cam York;D;PHI;84;85 84 86 84 89 83 85 83 86 86 85 86 83 87 89 84 84 56 86 84 84 90 81 65 87;
+Alex Laferriere;AD;LAK;84;90 89 85 85 84 86 87 89 88 85 85 87 85 87 86 85 85 71 89 86 81 85 82 84 87;25 12
+Olen Zellweger;D;BUF;84;89 89 87 86 80 86 86 88 88 88 85 88 85 88 85 87 81 55 88 83 86 84 80 65 81;9 4
+Sean Walker;D;CAR;84;89 90 89 84 86 87 87 89 87 85 84 86 84 86 86 88 80 55 87 86 86 87 83 70 86;
+Jake DeBrusk;AG;VAN;84;86 87 83 84 87 86 88 86 90 84 85 84 85 89 86 83 88 67 87 84 84 84 81 70 87;6 7
+Dmitri Voronkov;AG;CBJ;84;84 83 84 85 87 85 87 84 85 85 86 87 85 89 88 85 81 70 91 89 84 86 85 68 83;6 16
+Chandler Stephenson;C;SEA;84;88 89 84 83 88 83 86 82 84 87 90 88 84 88 87 85 87 82 85 81 87 86 79 70 88;10
+Tyler Bertuzzi;AG;CHI;84;83 83 85 86 83 85 87 83 89 86 87 86 87 88 86 84 84 69 88 83 85 83 81 80 87;7 25
+Sean Durzi;D;NYR;84;88 87 86 84 82 85 85 87 84 85 87 87 85 90 86 87 81 55 85 83 84 88 80 70 81;14
+Connor McMichael;C;STL;84;89 89 85 82 84 85 85 84 86 85 86 87 85 87 88 86 82 73 86 82 85 86 80 68 86;7 14
+Neal Pionk;D;WPG;84;84 83 81 83 82 87 87 86 87 86 87 85 82 89 86 85 81 55 88 87 82 85 85 70 82;9 4
+Noah Cates;AG;PHI;84;83 82 86 91 85 82 84 83 84 85 83 86 84 85 89 83 84 75 91 86 90 87 85 75 85;25 21
+Mikael Backlund;C;CGY;84;84 83 84 83 89 86 87 85 87 85 85 87 84 86 89 83 85 83 87 82 87 84 80 70 87;27 21
+Eetu Luostarinen;C;FLA;84;83 82 83 83 85 81 84 81 84 82 84 85 84 86 90 85 83 71 88 86 88 88 83 65 84;
+Sean Couturier;C;PHI;84;84 83 82 85 87 84 86 82 85 84 85 85 84 86 90 84 83 84 89 84 88 87 82 70 86;27 21
+Alex Lyon;G;BUF;84;;
+Anders Lee;AG;UTA;84;;
+Braden Schneider;D;NYR;84;;
+Casey Mittelstadt;C;BOS;84;;
+Drew Helleson;D;ANA;84;;
+Emmitt Finnie;C;DET;84;;
+Evan Rodrigues;C;NJD;84;;
+Ian Cole;D;CHI;84;;
+Jake Neighbours;AG;STL;84;;
+Jalen Chatfield;D;CAR;84;;
+Jamie Drysdale;D;PHI;84;;
+Jared Spurgeon;D;MIN;84;;
+Jeremy Lauzon;D;VGK;84;;
+Joseph Woll;G;PHI;84;;
+Kent Johnson;C;CBJ;84;;
+Kevin Bahl;D;CGY;84;;
+Mario Ferraro;D;WPG;84;;
+Mathieu Olivier;AD;CBJ;84;;
+Oliver Kapanen;C;MTL;84;;
+Parker Wotherspoon;D;VGK;84;;
+Ryan McDonagh;D;TBL;84;;
+Simon Holmstrom;AD;NYI;84;;
+Tyler Myers;D;DAL;84;;
+Tyler Seguin;C;DAL;84;;
+Vasily Podkolzin;AD;EDM;84;;
+Viktor Arvidsson;AG;DET;84;;
+Yegor Chinakhov;AD;PIT;84;;
+Aatu Raty;C;TOR;83;;
+Adam Lowry;C;WPG;83;;
+Alex Nedeljkovic;G;SJS;83;;
+Alex Newhook;C;MTL;83;;
+Alexander Romanov;D;NYI;83;;
+Alexandre Carrier;D;MTL;83;;
+Anton Frondell;C;CHI;83;;
+Arseny Gritsyuk;AD;NJD;83;;
+Arvid Soderblom;G;CHI;83;;
+Barrett Hayton;C;UTA;83;;
+Ben Chiarot;D;DET;83;;
+Bobby McMann;C;SEA;83;;
+Boone Jenner;C;WSH;83;;
+Brandon Duhaime;AD;TOR;83;;
+Brett Kulak;D;COL;83;;
+Cam Fowler;D;STL;83;;
+Carter Hart;G;VGK;83;;
+Chris Kreider;AG;MTL;83;;
+Christian Dvorak;AG;PHI;83;;
+Cole Perfetti;C;WPG;83;;
+Cole Sillinger;C;CBJ;83;;
+Collin Graf;AD;SJS;83;;
+Connor Brown;AD;NJD;83;;
+Connor Zary;C;CGY;83;;
+Conor Geekie;C;TBL;83;;
+Dawson Mercer;C;WPG;83;;
+Drew O'Connor;AG;VAN;83;;
+Easton Cowan;AD;TOR;83;;
+Eeli Tolvanen;AD;NYR;83;;
+Filip Chytil;C;VAN;83;;
+Fraser Minten;C;BOS;83;;
+Frederik Andersen;G;EDM;83;;
+Ian Moore;D;ANA;83;;
+Jack Roslovic;C;TOR;83;;
+Jake Allen;G;NJD;83;;
+Jake Evans;C;MTL;83;;
+Jason Zucker;AG;BUF;83;;
+Joel Edmundson;D;LAK;83;;
+Joel Kiviranta;AG;DAL;83;;
+Joey Daccord;G;SEA;83;;
+Jonathan Huberdeau;AG;CGY;83;;
+Jonathan Marchessault;C;NSH;83;;
+Jordan Binnington;G;STL;83;;
+Jordan Spence;D;OTT;83;;
+Justin Brazeau;AD;PIT;83;;
+Justin Sourdif;AD;WSH;83;;
+Kaapo Kakko;AD;SEA;83;;
+Kaedan Korczak;D;PIT;83;;
+Kiefer Sherwood;AG;SJS;83;;
+Mackie Samoskevich;AD;SEA;83;;
+Marat Khusnutdinov;C;BOS;83;;
+Marcus Foligno;AG;MIN;83;;
+Matias Maccelli;AG;NYI;83;;
+Mavrik Bourque;C;NSH;83;;
+Max Domi;C;TOR;83;;
+Michael Amadio;AD;OTT;83;;
+Michael Kesselring;D;SJS;83;;
+Nate Schmidt;D;UTA;83;;
+Nicholas Paul;AG;TOR;83;;
+Nick Blankenburg;D;TOR;83;;
+Nick Perbix;D;NSH;83;;
+Nick Seeler;D;PHI;83;;
+Nino Niederreiter;AD;WPG;83;;
+Oliver Bjorkstrand;AD;NYR;83;;
+Olli Maatta;D;MIN;83;;
+Peyton Krebs;C;BUF;83;;
+Phillip Danault;C;MTL;83;;
+Pius Suter;C;STL;83;;
+Ridly Greig;C;OTT;83;;
+Ryan Donato;C;CHI;83;;
+Ryan Hartman;AD;MIN;83;;
+Ryan Shea;D;EDM;83;;
+Samuel Helenius;C;LAK;83;;
+Sean Monahan;C;CBJ;83;;
+Stuart Skinner;G;WPG;83;;
+Tommy Novak;C;PIT;83;;
+Tony DeAngelo;D;NYI;83;;
+Trevor Moore;AG;LAK;83;;
+Tyler Kleven;D;OTT;83;;
+Tyson Foerster;AD;PHI;83;;
+Ukko-Pekka Luukkonen;G;BUF;83;;
+Uvis Balinskis;D;FLA;83;;
+Vinnie Hinostroza;C;COL;83;;
+Warren Foegele;AG;OTT;83;;
+Will Borgen;D;BOS;83;;
+Will Cuylle;AG;NYR;83;;
+Yakov Trenin;C;MIN;83;;
+Yanni Gourde;C;TBL;83;;
+Zach Whitecloud;D;CGY;83;;
+Zemgus Girgensons;C;TBL;83;;
+A.J. Greer;AG;ANA;82;;
+Alberts Smits;D;NYR;82;;
+Alex Iafallo;AG;WPG;82;;
+Alexander Kerfoot;C;NSH;82;;
+Andre Burakovsky;AG;OTT;82;;
+Andrei Kuzmenko;AG;PIT;82;;
+Andrew Copp;C;DET;82;;
+Arturs Silovs;G;PIT;82;;
+Bobby Brink;AD;MIN;82;;
+Brett Howden;C;VGK;82;;
+Brian Dumoulin;D;LAK;82;;
+Charle-Edouard D'Astous;D;TBL;82;;
+Cody Ceci;D;LAK;82;;
+Cole Schwindt;AD;FLA;82;;
+Colton Sissons;C;TOR;82;;
+Connor Clifton;D;BOS;82;;
+Corey Perry;AD;LAK;82;;
+Daniil But;AG;UTA;82;;
+Danila Yurov;AD;MIN;82;;
+Dante Fabbro;D;CBJ;82;;
+David Perron;AG;DAL;82;;
+Devin Cooley;G;CGY;82;;
+Dylan Garand;G;NYR;82;;
+Emil Heineman;AG;NYI;82;;
+Ethen Frank;C;WSH;82;;
+Fabian Zetterlund;AG;OTT;82;;
+Fedor Svechkov;C;COL;82;;
+Frederick Gaudreau;C;SEA;82;;
+Gabe Perreault;AD;NYR;82;;
+Gage Goncalves;C;TBL;82;;
+Henri Jokiharju;D;BOS;82;;
+Igor Chernyshov;AG;SJS;82;;
+Ilya Mikheyev;AD;TBL;82;;
+Jack Drury;C;NSH;82;;
+Jack McBain;C;UTA;82;;
+Jacob Bryson;D;DET;82;;
+Jaden Schwartz;C;COL;82;;
+Jamie Benn;AG;DAL;82;;
+Jason Dickinson;C;EDM;82;;
+Jordan Martinook;AG;CAR;82;;
+Justin Barron;D;STL;82;;
+Juuso Pärssinen;C;NYR;82;;
+Keegan Kolesar;AD;DET;82;;
+Kevin Lankinen;G;VAN;82;;
+Kirby Dach;C;MTL;82;;
+Kyle Palmieri;C;NYI;82;;
+Lars Eller;C;FLA;82;;
+Lawson Crouse;AG;UTA;82;;
+Linus Karlsson;C;VAN;82;;
+Logan Stanley;D;NYI;82;;
+Louis Crevier;D;BUF;82;;
+Luke Schenn;D;VAN;82;;
+Matt Savoie;C;EDM;82;;
+Michael Bunting;AG;PHI;82;;
+Michael Carcone;AG;UTA;82;;
+Morgan Barron;C;WPG;82;;
+Nic Dowd;C;VGK;82;;
+Nicholas Robertson;AG;PIT;82;;
+Nick Foligno;AG;MIN;82;;
+Nick Jensen;D;ANA;82;;
+Nicolas Roy;C;COL;82;;
+Noah Laba;C;NYR;82;;
+Noel Acciari;C;PHI;82;;
+Parker Kelly;C;COL;82;;
+Pavel Mintyukov;D;ANA;82;;
+Philipp Grubauer;G;SEA;82;;
+Pyotr Kochetkov;G;CAR;82;;
+Ross Colton;C;NSH;82;;
+Ryan Lindgren;D;SEA;82;;
+Ryan Poehling;C;ANA;82;;
+Samuel Ersson;G;OTT;82;;
+Scott Mayfield;D;NYI;82;;
+Teddy Blueger;C;TOR;82;;
+Teuvo Teravainen;C;CHI;82;;
+Tim Washe;C;ANA;82;;
+Timothy Liljegren;D;WSH;82;;
+Trevor van Riemsdyk;D;PIT;82;;
+Troy Stecher;D;TOR;82;;
+Tyler Tucker;D;STL;82;;
+Tyson Kozak;C;BUF;82;;
+Victor Olofsson;AG;VGK;82;;
+Vincent Desharnais;D;WSH;82;;
+Yegor Sharangovich;C;CGY;82;;
+Zach Bogosian;D;MIN;82;;
+Zack Bolduc;AD;MTL;82;;
+Zeev Buium;D;VAN;82;;
+Adam Gaudette;AD;SJS;81;;
+Alex Bump;AG;PHI;81;;
+Alex Killorn;AG;ANA;81;;
+Alex Turcotte;C;LAK;81;;
+Alexandre Texier;AG;MTL;81;;
+Alexey Toropchenko;AD;STL;81;;
+Andrew Peeke;D;UTA;81;;
+Anthony Beauvillier;AG;WSH;81;;
+Anthony Duclair;AG;NYI;81;;
+Anthony Stolarz;G;TOR;81;;
+Anton Forsberg;G;LAK;81;;
+Arber Xhekaj;D;MTL;81;;
+Artyom Levshunov;D;CHI;81;;
+Axel Sandin-Pellikka;D;DET;81;;
+Aydar Suniev;AG;CGY;81;;
+Beck Malenstyn;AG;BUF;81;;
+Berkly Catton;C;SEA;81;;
+Braeden Bowman;AD;VGK;81;;
+Brendan Gallagher;AD;VAN;81;;
+Cale Fleury;D;SEA;81;;
+Carson Soucy;D;CBJ;81;;
+Casey Cizikas;C;NYI;81;;
+Cayden Primeau;G;CAR;81;;
+Charles-Alexis Legault;D;CAR;81;;
+Cody Glass;C;NJD;81;;
+Cole Smith;AG;CHI;81;;
+Dakota Joshua;C;TOR;81;;
+Declan Chisholm;D;NJD;81;;
+Devon Levi;G;EDM;81;;
+Dmitry Kulikov;D;FLA;81;;
+Donovan Sebrango;D;FLA;81;;
+Elias Pettersson;D;VAN;81;;
+Elvis Merzlikins;G;TOR;81;;
+Emil Lilleberg;D;TBL;81;;
+Erik Haula;AG;LAK;81;;
+Ethan Del Mastro;D;CHI;81;;
+Frank Vatrano;AD;ANA;81;;
+Hendrix Lapierre;C;PIT;81;;
+Isac Lundestrom;C;CBJ;81;;
+Ivan Miroshnichenko;AG;WSH;81;;
+J.T. Compher;AG;DET;81;;
+Jake Christiansen;D;CBJ;81;;
+Jayden Struble;D;NSH;81;;
+Jean-Gabriel Pageau;C;NYI;81;;
+Joe Veleno;C;NYR;81;;
+Joel Armia;AD;LAK;81;;
+Joel Farabee;AG;CGY;81;;
+Jonatan Berggren;AD;STL;81;;
+Jonny Brodzinski;C;WSH;81;;
+Joonas Korpisalo;G;NYR;81;;
+Jordan Greenway;AG;CHI;81;;
+Josh Anderson;AD;MTL;81;;
+Justus Annunen;G;NSH;81;;
+Kasperi Kapanen;AD;EDM;81;;
+Kevin Korchinski;D;CHI;81;;
+Lian Bichsel;D;DAL;81;;
+Matt Grzelcyk;D;BUF;81;;
+Maxim Shabanov;AD;MIN;81;;
+Michael McCarron;AD;MIN;81;;
+Nick Bjugstad;C;WPG;81;;
+Nick Cousins;C;OTT;81;;
+Nikita Klepov;AD;ANA;81;;
+Nils Lundkvist;D;DAL;81;;
+Oliver Moore;C;CHI;81;;
+Oskar Sundqvist;C;STL;81;;
+Paul Cotter;C;VAN;81;;
+Radek Faksa;C;DAL;81;;
+Rasmus Ristolainen;D;PHI;81;;
+Ryan Leonard;AD;WSH;81;;
+Ryan Strome;C;CGY;81;;
+Ryker Evans;D;SEA;81;;
+Sam Carrick;C;BUF;81;;
+Sam Lafferty;C;FLA;81;;
+Sam Steel;C;DAL;81;;
+Samuel Honzek;AG;CGY;81;;
+Sean Kuraly;C;BOS;81;;
+Semyon Varlamov;G;NYI;81;;
+Shakir Mukhamadullin;D;EDM;81;;
+Simon Benoit;D;PHI;81;;
+Stefan Noesen;AD;NJD;81;;
+Stephen Halliday;C;OTT;81;;
+Steven Lorentz;C;CBJ;81;;
+Tom Willander;D;VAN;81;;
+Tyson Jost;C;NSH;81;;
+Vladislav Namestnikov;C;WPG;81;;
+William Carrier;AG;CAR;81;;
+Zayne Parekh;D;CGY;81;;
+Benjamin Kindel;C;PIT;80;87 86 86 84 79 86 86 86 87 87 86 89 85 87 86 84 84 75 89 83 86 87 82 65 84;
+Adam Edstrom;C;NSH;80;;
+Adam Wilsby;D;NSH;80;;
+Adin Hill;G;VGK;80;;
+Akira Schmid;G;FLA;80;;
+Albert Johansson;D;DET;80;;
+Barclay Goodrow;AD;SJS;80;;
+Blake Lizotte;C;PIT;80;;
+Brady Martin;C;NSH;80;;
+Braeden Cootes;C;VAN;80;;
+Brandon Tanev;AG;UTA;80;;
+Brayden Pachal;D;CGY;80;;
+Calum Ritchie;C;NYI;80;;
+Cam Talbot;G;CBJ;80;;
+Carl Grundstrom;AD;PHI;80;;
+Casey DeSmith;G;DAL;80;;
+Charlie Lindgren;G;WSH;80;;
+Cole Koepke;AG;WPG;80;;
+Colin Blackwell;C;DAL;80;;
+Colten Ellis;G;BUF;80;;
+Colton Dach;C;EDM;80;;
+Connor Dewar;C;PIT;80;;
+Conor Timmins;D;BUF;80;;
+Dalibor Dvorsky;AD;STL;80;;
+Daniil Tarasov;G;DET;80;;
+Danton Heinen;AG;CBJ;80;;
+Declan Carlile;D;PIT;80;;
+Dominic James;C;TBL;80;;
+Drew Fortescue;D;NYR;80;;
+Elmer Soderblom;AG;PIT;80;;
+Emil Andrae;D;CBJ;80;;
+Eric Comrie;G;SJS;80;;
+Eric Robinson;AG;CAR;80;;
+Fabian Lysell;AD;COL;80;;
+Filip Hallander;C;EDM;80;;
+Harrison Brunicke;D;PIT;80;;
+Haydn Fleury;D;WPG;80;;
+Ilya Lyubushkin;D;NSH;80;;
+Jacob Bernard-Docker;D;DET;80;;
+Jacob Fowler;G;MTL;80;;
+Jansen Harkins;C;TBL;80;;
+Jesper Boqvist;C;NJD;80;;
+Jiri Kulich;C;BUF;80;;
+Joel Hanley;D;CGY;80;;
+Johnny Beecher;C;FLA;80;;
+Joshua Mahura;D;SEA;80;;
+Justin Holl;D;WSH;80;;
+Justin Hryckowian;C;DAL;80;;
+Kevin Stenlund;C;UTA;80;;
+Leevi Merilainen;G;VAN;80;;
+Liam O'Brien;C;UTA;80;;
+Liam Öhgren;AG;VAN;80;;
+Logan O'Connor;AD;COL;80;;
+Luke Glendening;C;NYR;80;;
+Mark Jankowski;C;CAR;80;;
+Martin Pospisil;C;CGY;80;;
+Mason Appleton;C;DET;80;;
+Mathieu Joseph;AD;EDM;80;;
+Matt Tomkins;G;EDM;80;;
+Mattias Janmark;C;EDM;80;;
+Max Sasson;C;VAN;80;;
+Maxwell Crozier;D;TBL;80;;
+Michael DiPietro;G;BOS;80;;
+Michael Eyssimont;C;BOS;80;;
+Michael Rasmussen;C;DET;80;;
+Miles Wood;AG;TOR;80;;
+Nate Danielson;C;DET;80;;
+Nathan Bastian;AD;FLA;80;;
+Nico Sturm;C;MIN;80;;
+Nicolas Deslauriers;AG;CAR;80;;
+Nils Hoglander;AG;NSH;80;;
+Noah Gregor;AG;WPG;80;;
+Noah Ostlund;C;BUF;80;;
+Oasiz Wiesblatt;C;NSH;80;;
+Ondrej Palat;AG;NYI;80;;
+Oskar Back;C;DAL;80;;
+Philippe Myers;D;TOR;80;;
+Pierre Engvall;AG;NYI;80;;
+Pierre-Olivier Joseph;D;CAR;80;;
+Pontus Holmberg;AD;TBL;80;;
+Raphael Lavoie;C;VGK;80;;
+Roger McQueen;C;ANA;80;;
+Rutger McGroarty;AD;PIT;80;;
+Ryan Graves;D;PIT;80;;
+Ryan Lomberg;AG;CBJ;80;;
+Sam Dickinson;D;SJS;80;;
+Sam Montembeault;G;MTL;80;;
+Scott Laughton;AG;LAK;80;;
+Taylor Raddysh;AD;NYR;80;;
+Taylor Ward;AD;LAK;80;;
+Tristan Jarry;G;EDM;80;;
+Ty Dellandrea;C;SJS;80;;
+Ty Emberson;D;EDM;80;;
+Tye Kartye;AG;NYR;80;;
+Tyson Hinds;D;ANA;80;;
+Ville Koivunen;AD;PIT;80;;
+Wyatt Kaiser;D;CHI;80;;
+Alex Barre-Boulet;C;SJS;79;;
+Bo Groulx;C;TOR;79;;
+David Jiricek;D;PHI;79;;
+Dmitri Simashev;D;UTA;79;;
+Erik Gudbranson;D;CBJ;79;;
+Erik Gustafsson;D;LAK;79;;
+Filip Bystedt;C;SJS;79;;
+Ilya Protas;AG;WSH;79;;
+Isaak Phillips;D;WPG;79;;
+Jacob Quillan;C;VAN;79;;
+Jesperi Kotkaniemi;C;CAR;79;;
+John Leonard;AG;DET;79;;
+Jonah Gadjovich;AG;FLA;79;;
+Kailer Yamamoto;AD;UTA;79;;
+Konsta Helenius;C;BUF;79;;
+Luca Del Bel Belluz;C;CBJ;79;;
+Marco Kasper;C;DET;79;;
+Matthew Robertson;D;NYR;79;;
+Matthew Wood;AD;NSH;79;;
+Nikita Nesterenko;C;ANA;79;;
+Nikita Tolopilo;G;VAN;79;;
+Ross Johnston;AG;STL;79;;
+Rémi Poirier;G;NJD;79;;
+Scott Perunovich;D;LAK;79;;
+Tanner Laczynski;C;VGK;79;;
+Theo Lindstein;D;STL;79;;
+Tristan Luneau;D;ANA;79;;
+Zachary L'Heureux;AG;COL;79;;
+Adam Klapka;AD;CGY;78;;
+Alexander Petrovic;D;FLA;78;;
+Atro Leppänen;D;EDM;78;;
+Caleb Desnoyers;C;UTA;78;;
+Carson Lambos;D;MIN;78;;
+Carter Yakemchuk;D;OTT;78;;
+Cole Hutson;D;WSH;78;;
+Cole McWard;D;TOR;78;;
+Cooper Black;G;FLA;78;;
+Dillon Dube;C;STL;78;;
+Dylan McIlrath;D;WSH;78;;
+Georgii Merkulov;C;COL;78;;
+Henry Thrun;D;WPG;78;;
+Ilya Samsonov;G;SJS;78;;
+Jakub Málek;G;NJD;78;;
+Jani Nyman;AD;SEA;78;;
+Jeffrey Viel;AG;TBL;78;;
+Joe Hicketts;D;LAK;78;;
+Jonathan Lekkerimäki;AD;VAN;78;;
+Justin Danforth;AD;BUF;78;;
+Logan Mailloux;D;STL;78;;
+Matvei Gridin;AD;CGY;78;;
+Nick DeSimone;D;UTA;78;;
+Nikolas Matinpalo;D;OTT;78;;
+Nolan Allan;D;SJS;78;;
+Reid Schaefer;AG;NSH;78;;
+Ryan Greene;C;CHI;78;;
+Sam Rinzel;D;CHI;78;;
+Sasha Pastujov;AG;MTL;78;;
+Scott Sabourin;AD;TBL;78;;
+Trent Frederic;C;EDM;78;;
+Victor Mancini;D;VAN;78;;
+Vincent Iorio;D;NYR;78;;
+Vitek Vanecek;G;NYI;78;;
+Vladislav Kolyachonok;D;NJD;78;;
+William Trudeau;D;NSH;78;;
+Yan Kuznetsov;D;CGY;78;;
+Zach Metsa;D;BUF;78;;
+Aleksei Kolosov;G;PHI;77;;
+Andrew Mangiapane;AG;CHI;77;;
+Ben Meyers;C;SEA;77;;
+Bokondji Imama;AG;FLA;77;;
+Brett Leason;AD;SJS;77;;
+Cameron Lund;C;SJS;77;;
+Garnet Hathaway;AD;FLA;77;;
+Isak Rosen;AD;WPG;77;;
+James Reimer;G;NYR;77;;
+Jonas Johansson;G;OTT;77;;
+Justin Robidas;C;CAR;77;;
+Kenny Connors;C;LAK;77;;
+Kurtis MacDermid;AG;OTT;77;;
+Kyle Capobianco;D;DAL;77;;
+Kyle MacLean;C;NYI;77;;
+Landon Slaggert;AG;CHI;77;;
+Lenni Hämeenaho;AD;NJD;77;;
+Matt Kiersted;D;MIN;77;;
+Matt Rempe;C;NYR;77;;
+Matthew Kessel;D;NYI;77;;
+Mikael Pyyhtiä;AG;CBJ;77;;
+Nathan Walker;AG;STL;77;;
+Sammy Blais;AG;OTT;77;;
+Sandis Vilmanis;AG;FLA;77;;
+Sergei Murashov;G;PIT;77;;
+Simon Lundmark;D;TBL;77;;
+Tyler Pitlick;AD;MIN;77;;
+V. Pinchuk;C;NSH;77;;
+Ville Ottavainen;D;SEA;77;;
+Zach Dean;C;STL;77;;
+Zack Ostapchuk;C;SJS;77;;</script>
 
 <div class="voile" id="voile-dg">
   <form class="fenetre" id="form-dg">
@@ -1143,8 +1150,10 @@ const POSITIONS = {
   AG: 'AG', LW: 'AG', L: 'AG', AD: 'AD', RW: 'AD', R: 'AD', A: 'A', F: 'A', W: 'A',
   D: 'D', LD: 'D', RD: 'D', DG: 'D', DD: 'D', G: 'G', GK: 'G',
 };
-// Statistiques détaillées (colonnes du site des cotes d'EA)
-const STATS = [['acl', 'Accélération'], ['spd', 'Vitesse'], ['fnt', 'Feintes'], ['pas', 'Passes'], ['ptf', 'Tir frappé'], ['ptp', 'Tir des poignets']];
+// Fiche détaillée : groupes de statistiques des patineurs (P) et des gardiens (G), dans l'ordre où elles sont enregistrées
+const FICHE = {"P": [["Patinage", ["Accélération", "Vitesse", "Agilité", "Équilibre", "Endurance"]], ["Tir", ["Puissance du tir frappé", "Précision du tir frappé", "Puissance du tir du poignet", "Précision du tir du poignet"]], ["Maniement", ["Feintes", "Passes", "Contrôle de la rondelle", "Coordination œil-main"]], ["Sens du jeu", ["Lucidité offensive", "Lucidité défensive", "Assurance", "Discipline", "Mises au jeu"]], ["Physique", ["Force", "Mise en échec corporelle", "Mise en échec avec le bâton", "Blocage des tirs", "Agressivité", "Aptitude à la bagarre", "Résistance"]]], "G": [["Arrêts", ["Côté mitaine, haut", "Côté mitaine, bas", "Côté bâton, haut", "Côté bâton, bas", "Entre les jambières"]], ["Positionnement", ["Angles", "Échappées", "Contrôle des rebonds", "Récupération après un tir", "Agressivité"]], ["Jeu avec la rondelle", ["Harponnage", "Passes", "Sorties pour jouer la rondelle", "Vision"]], ["Athlétisme", ["Vitesse", "Agilité", "Assurance", "Endurance", "Résistance"]]]};
+// X-Factors : [nom, résumé]
+const XFACTORS = [["Recharger", "Gardien : se fatigue moins et redonne de l'énergie à son équipe après un gros arrêt."], ["Vrai charisme", "Redonne de l'énergie à son équipe après un tir bloqué, une mise en échec ou un tir au but."], ["Irrésistible", "Mises en échec inversées plus puissantes."], ["Superbe revers", "Tirs et passes du revers plus puissants et plus précis."], ["Bien envoyé", "Ses passes donnent un élan d'accélération au receveur."], ["Cassage de reins", "Gagne de la vitesse après une feinte réussie contre un défenseur."], ["Tenue de cap", "Protège mieux la rondelle en fonçant au filet : plus de force, d'équilibre et d'agilité."], ["Grosse déviance", "Déviations plus précises devant le filet, et il voile mieux le gardien."], ["En feu", "Gardien : plus précis et plus vif à chaque arrêt de suite, jusqu'au prochain but accordé."], ["Changements de cap", "Accélération et agilité accrues dans les virages serrés."], ["Sur rails", "Vitesse de pointe et accélération supérieures une fois lancé."], ["Guerrier", "Perd moins d'endurance en frappant ou en bloquant des tirs, et encaisse mieux les grosses mises en échec."], ["Brutalité", "Mises en échec à l'épaule plus dures, qui épuisent et ralentissent l'adversaire."], ["Coup de bâton", "Harponnages plus précis et bâton défensif plus rapide."], ["Très bonnes passes", "Passes plus puissantes et plus précises, même sans regarder."], ["Éponge", "Gardien : absorbe les tirs et accorde moins de rebonds."], ["Feu aux poudres", "Ses mises en échec mettent de la pression et lui donnent un regain de vitesse."], ["Spectaculaire", "Gardien : meilleurs arrêts réflexes et de suite, et il voit mieux les tirs voilés."], ["Second souffle", "Récupère son énergie d'un coup quand il est épuisé."], ["Rocket", "Tirs frappés plus puissants et plus précis, qui créent de gros rebonds."], ["Lancer rapide", "Dégaine ses tirs beaucoup plus vite."], ["Choix éclair", "Intercepte plus facilement les passes grâce à une meilleure portée."], ["Pression+", "Ses tirs ajoutent de la pression sur l'adversaire, même quand ils sont arrêtés."], ["D’un poteau à l’autre", "Gardien : déplacements latéraux plus rapides et arrêts plus précis en glissant."], ["Tir sur Réception", "Tirs sur réception plus puissants et plus précis."], ["Hors concours", "Gagne les batailles pour la rondelle grâce à un bâton plus fort et plus de vitesse."], ["Hipster", "Mises en échec avec la hanche dévastatrices, qui épuisent et ralentissent l'adversaire."], ["À moi les duels", "Gagne ses mises au jeu plus vite et crée des occasions dès la mise au jeu."]];
 
 function toast(msg, erreur) {
   const d = document.createElement('div');
@@ -1171,7 +1180,8 @@ function codeAleatoire() {
 }
 
 // Une liste enregistrée dans la base peut revenir sous forme de tableau ou d'objet numéroté
-const enListe = (v) => (Array.isArray(v) ? v : v && typeof v === 'object' ? Object.keys(v).sort((a, b) => a - b).map((k) => v[k]) : []).filter(Boolean);
+const tableau = (v) => (Array.isArray(v) ? v : v && typeof v === 'object' ? Object.keys(v).sort((a, b) => a - b).map((k) => v[k]) : []);
+const enListe = (v) => tableau(v).filter(Boolean);
 
 /* ---------- Couleurs et écussons des équipes ---------- */
 const COULEURS_LNH = [
@@ -1540,15 +1550,17 @@ function analyserJoueurs(texte) {
   const trouve = (mots) => tete.findIndex((x) => mots.some((m) => x.includes(m)));
   if (!tete.some((x) => /^\d+$/.test(x)) && trouve(['nom', 'name', 'joueur', 'player']) !== -1) {
     col = { n: trouve(['nom', 'name', 'joueur', 'player']), p: trouve(['pos']), e: trouve(['équipe', 'equipe', 'team', 'club']), c: trouve(['cote', 'ovr', 'overall', 'général', 'general', 'gen']),
-      s: STATS.map(([cle]) => tete.indexOf(cle)) };
+      s: tete.indexOf('stats'), x: tete.indexOf('xf') };
     lignes.shift();
   }
   const joueurs = []; let rejets = 0;
   for (const l of lignes) {
-    const t = decoupe(l); let n, p, e, c, s = null;
+    const t = decoupe(l); let n, p, e, c, s = null, x = null;
     if (col) {
       n = t[col.n]; p = POSITIONS[(t[col.p] || '').toUpperCase()]; e = col.e >= 0 ? t[col.e] : ''; c = parseInt(t[col.c], 10);
-      if (col.s.every((i) => i >= 0)) { const v = col.s.map((i) => parseInt(t[i], 10)); if (v.every((x) => x >= 1 && x <= 99)) s = v; }
+      const nombres = (i) => (i >= 0 && t[i] ? t[i].split(/\s+/).map((v) => parseInt(v, 10)) : []);
+      const vs = nombres(col.s); if (vs.length && vs.every((v) => v >= 1 && v <= 99)) s = vs;
+      const vx = nombres(col.x); if (vx.length && vx.every((v) => v >= 0 && v < XFACTORS.length)) x = vx;
     } else {
       const nombres = t.filter((x) => /^\d{2}$/.test(x) && +x >= 40 && +x <= 99);
       c = nombres.length ? +nombres[nombres.length - 1] : NaN;
@@ -1557,7 +1569,7 @@ function analyserJoueurs(texte) {
       const textes = t.filter((x, i) => i !== iPos && x && !/^\d+$/.test(x));
       n = textes[0]; e = textes[1] || '';
     }
-    if (n && p && c >= 40 && c <= 99) { const j = { n: n.slice(0, 40), p, e: (e || '').slice(0, 12), c }; if (s) j.s = s; joueurs.push(j); }
+    if (n && p && c >= 40 && c <= 99) { const j = { n: n.slice(0, 40), p, e: (e || '').slice(0, 12), c }; if (s) j.s = s; if (x) j.x = x; joueurs.push(j); }
     else rejets++;
   }
   return { joueurs, rejets };
@@ -1698,8 +1710,14 @@ function rendreEtat() {
 }
 
 function ficheJoueur(j) {
-  if (!j.s) return `<div class="detail"><span class="aide">Statistiques détaillées non disponibles pour ce joueur (EA ne les publie que pour les patineurs de son top 300).</span></div>`;
-  return `<div class="detail"><div class="stats">${STATS.map(([, nom], i) => `<div class="stat">${nom}<b>${j.s[i]}</b><i><u style="width:${j.s[i]}%"></u></i></div>`).join('')}</div></div>`;
+  const groupes = FICHE[j.p === 'G' ? 'G' : 'P'];
+  const attendu = groupes.reduce((n, g) => n + g[1].length, 0);
+  const s = tableau(j.s);
+  if (s.length !== attendu) return `<div class="detail"><span class="aide">Statistiques détaillées non disponibles pour ce joueur : EA ne les publie que pour son top 300.</span></div>`;
+  const xf = tableau(j.x).map((v) => XFACTORS[v]).filter(Boolean);
+  let i = 0;
+  return `<div class="detail">${xf.length ? `<div class="xfs">${xf.map(([nom, resume]) => `<div class="xf"><b><span class="x">X</span>${esc(nom)}</b><span>${esc(resume)}</span></div>`).join('')}</div>` : ''}
+    <div class="groupes">${groupes.map(([titre, noms]) => `<div class="groupe"><h4>${esc(titre)}</h4>${noms.map((nom) => { const v = s[i++]; return `<div class="stat">${esc(nom)}<b>${v}</b><i><u style="width:${v}%"></u></i></div>`; }).join('')}</div>`).join('')}</div></div>`;
 }
 
 function rendreJoueurs() {
@@ -1736,7 +1754,7 @@ function rendreJoueurs() {
     else if (a) act = peutPrendre(a.tid, j) ? `<button class="btn petit principal" data-action="choisir" data-pid="${j.pid}">Repêcher</button>` : '<button class="btn petit" disabled>Complet</button>';
     const dansListe = mesSouhaits.includes(j.pid);
     const etoile = dg && !pris ? `<button class="etoile${dansListe ? ' on' : ''}" data-action="souhait" data-pid="${j.pid}" title="${dansListe ? 'Retirer de ma liste de souhaits' : 'Ajouter à ma liste de souhaits'}" aria-label="${dansListe ? 'Retirer de' : 'Ajouter à'} ma liste de souhaits">${dansListe ? '★' : '☆'}</button>` : '';
-    h += `<div class="rang${pris ? ' pris' : ''}"><span class="no">${j.rang}</span><span class="nom">${etoile}<button class="n" data-action="detail" data-pid="${j.pid}" title="Voir les statistiques">${esc(j.n)}</button></span><span><span class="pos ${g}">${esc(j.p)}</span></span><span class="eq">${esc(j.e)}</span><span class="cote">${j.c}</span><span class="act">${act}</span></div>`;
+    h += `<div class="rang${pris ? ' pris' : ''}"><span class="no">${j.rang}</span><span class="nom">${etoile}<button class="n" data-action="detail" data-pid="${j.pid}" title="Voir les statistiques">${esc(j.n)}</button>${tableau(j.x).length ? `<span class="xnb" title="${tableau(j.x).length} X-Factor(s)">X</span>` : ''}</span><span><span class="pos ${g}">${esc(j.p)}</span></span><span class="eq">${esc(j.e)}</span><span class="cote">${j.c}</span><span class="act">${act}</span></div>`;
     if (detail === j.pid) h += ficheJoueur(j);
   }
   h += '</div>';
