@@ -16,6 +16,7 @@
   --titre:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
+[hidden]{display:none !important}
 html,body{margin:0}
 body{background:var(--fond);color:var(--texte);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   background-image:radial-gradient(1200px 500px at 50% -200px,#16306e 0%,transparent 70%);background-repeat:no-repeat;min-height:100vh}
@@ -259,7 +260,7 @@ footer{color:var(--doux);font-size:12px;text-align:center;padding:26px 0 30px}
             <button class="btn" data-action="liste-lnh">Charger la liste LNH intégrée (783 joueurs)</button>
             <button class="btn" data-action="importer" data-confirme="1">Importer (remplace la liste)</button>
           </div>
-          <p class="aide">Les 300 meilleurs joueurs ont leur cote officielle d'EA (84 à 99). Les autres viennent des cotes relevées dans le jeu, de 77 à 84. Les joueurs cotés sous 77 ne sont pas dans la liste.</p>
+          <p class="aide">Les cotes viennent du top 300 officiel d'EA et des cotes relevées dans le jeu (77 à 99). Quand les deux diffèrent, c'est la cote du jeu qui est utilisée. Les joueurs cotés sous 77 ne sont pas dans la liste.</p>
           <div id="admin-joueurs" class="aide"></div>
         </div>
       </div>
@@ -422,7 +423,6 @@ Jakub Dobeš;G;MTL;86
 William Eklund;AG;OTT;86
 Dylan Cozens;C;OTT;86
 JJ Peterka;AD;BOS;86
-Jackson Blake;AD;CAR;86
 Ivan Barbashev;AG;VGK;86
 Seth Jones;D;FLA;86
 Josh Doan;AD;BUF;86
@@ -431,7 +431,6 @@ Filip Gustavsson;G;MIN;86
 Mackenzie Blackwood;G;COL;86
 Owen Power;D;BUF;86
 Brandon Montour;D;SEA;86
-Matty Beniers;C;SEA;86
 Jet Greaves;G;CBJ;86
 Rickard Rakell;AD;PIT;86
 Pierre-Luc Dubois;C;WSH;86
@@ -443,7 +442,6 @@ Aaron Ekblad;D;FLA;86
 Brady Skjei;D;NSH;86
 Bryan Rust;AD;PIT;86
 Nazem Kadri;C;COL;86
-Simon Edvinsson;D;DET;86
 Ryan Nugent-Hopkins;C;EDM;86
 Damon Severson;D;CBJ;86
 Dougie Hamilton;D;NJD;86
@@ -478,14 +476,12 @@ Darnell Nurse;D;SJS;85
 Matt Coronato;AD;CGY;85
 Pavel Zacha;C;BOS;85
 Owen Tippett;AD;PHI;85
-Frank Nazar;C;CHI;85
 Rasmus Sandin;D;WSH;85
 Joel Hofer;G;STL;85
 Morgan Frost;C;CGY;85
 Alexis Lafrenière;AG;NYR;85
 Mason McTavish;C;STL;85
 Marco Rossi;C;VAN;85
-Simon Nemec;D;CGY;85
 Ryan McLeod;C;BUF;85
 Luke Evangelista;AD;NSH;85
 Dan Vladar;G;PHI;85
@@ -518,7 +514,6 @@ Brenden Dillon;D;NJD;85
 Mikey Anderson;D;LAK;85
 Erik Cernak;D;TBL;85
 Gabriel Landeskog;AG;COL;85
-Jacob Trouba;D;SJS;85
 Artem Zub;D;OTT;85
 Taylor Hall;AG;CAR;85
 Kaiden Guhle;D;MTL;85
@@ -533,6 +528,12 @@ Blake Coleman;C;MIN;85
 Kris Letang;D;PIT;85
 Claude Giroux;C;OTT;85
 Brent Burns;D;COL;85
+Jackson Blake;AD;CAR;84
+Matty Beniers;C;SEA;84
+Simon Edvinsson;D;DET;84
+Frank Nazar;C;CHI;84
+Simon Nemec;D;CGY;84
+Jacob Trouba;D;SJS;84
 Jordan Staal;C;CAR;84
 Jacob Markstrom;G;FLA;84
 Valeri Nichushkin;AD;CBJ;84
@@ -564,7 +565,6 @@ Chandler Stephenson;C;SEA;84
 Tyler Bertuzzi;AG;CHI;84
 Sean Durzi;D;NYR;84
 Connor McMichael;C;STL;84
-Benjamin Kindel;C;PIT;84
 Neal Pionk;D;WPG;84
 Noah Cates;AG;PHI;84
 Mikael Backlund;C;CGY;84
@@ -860,6 +860,7 @@ Tyson Jost;C;NSH;81
 Vladislav Namestnikov;C;WPG;81
 William Carrier;AG;CAR;81
 Zayne Parekh;D;CGY;81
+Benjamin Kindel;C;PIT;80
 Adam Edstrom;C;NSH;80
 Adam Wilsby;D;NSH;80
 Adin Hill;G;VGK;80
